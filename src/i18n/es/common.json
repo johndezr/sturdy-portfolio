@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "certificates": "Certificados",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role": "Desarrollador de Software",
+    "description": "Especializado en crear experiencias digitales excepcionales con un enfoque en rendimiento y accesibilidad."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "years": "años de experiencia"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "viewAll": "Ver todos"
+  },
+  "certificates": {
+    "title": "Certificados"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Leer más"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados"
+  }
+}
