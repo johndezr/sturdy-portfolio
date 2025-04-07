@@ -1,0 +1,121 @@
+---
+// Featured Projects component
+---
+
+<section id="projects" class="relative py-16 md:py-24">
+  <!-- Background gradient -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-background to-muted/50"></div>
+  
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="mb-12 text-center">
+      <h2 class="mb-4 text-4xl font-bold">Featured Projects</h2>
+      <p class="mx-auto max-w-2xl text-muted-foreground text-base md:text-lg">
+        A showcase of my recent work, featuring web applications built with modern technologies and best practices.
+      </p>
+    </div>
+    
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Project 1 -->
+      <div class="group flex h-full flex-col overflow-hidden rounded-lg border bg-card shadow-sm transition-all hover:shadow-md">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src="https://picsum.photos/600/400?random=1" 
+            alt="TaskFlow Project" 
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-2 text-xl font-semibold">TaskFlow</h3>
+          <p class="mb-4 flex-1 text-muted-foreground">
+            A productivity app that helps teams manage projects, track progress, and collaborate in real-time.
+          </p>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <a href="#" class="text-xs inline-flex items-center justify-center rounded-md border bg-background h-8 px-3 font-medium shadow-xs hover:bg-accent hover:text-accent-foreground">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-1 h-4 w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
+              View Code
+            </a>
+            <a href="#" class="text-xs inline-flex items-center justify-center rounded-md h-8 px-3 font-medium bg-primary text-primary-foreground shadow-xs hover:bg-primary/90">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-1 h-4 w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+              Live Preview
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="group flex h-full flex-col overflow-hidden rounded-lg border bg-card shadow-sm transition-all hover:shadow-md">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src="https://picsum.photos/600/400?random=2" 
+            alt="HealthHub Project" 
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-2 text-xl font-semibold">HealthHub</h3>
+          <p class="mb-4 flex-1 text-muted-foreground">
+            A wellness platform that allows users to track fitness goals, nutrition, and connect with health professionals.
+          </p>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <a href="#" class="text-xs inline-flex items-center justify-center rounded-md border bg-background h-8 px-3 font-medium shadow-xs hover:bg-accent hover:text-accent-foreground">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-1 h-4 w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
+              View Code
+            </a>
+            <a href="#" class="text-xs inline-flex items-center justify-center rounded-md h-8 px-3 font-medium bg-primary text-primary-foreground shadow-xs hover:bg-primary/90">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-1 h-4 w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+              Live Preview
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 3 -->
+      <div class="group flex h-full flex-col overflow-hidden rounded-lg border bg-card shadow-sm transition-all hover:shadow-md">
+        <div class="relative h-48 overflow-hidden">
+          <img 
+            src="https://picsum.photos/600/400?random=3" 
+            alt="EcoMarket Project" 
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-2 text-xl font-semibold">EcoMarket</h3>
+          <p class="mb-4 flex-1 text-muted-foreground">
+            An e-commerce platform focused on sustainable and eco-friendly products with advanced filtering and recommendation engine.
+          </p>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <a href="#" class="text-xs inline-flex items-center justify-center rounded-md border bg-background h-8 px-3 font-medium shadow-xs hover:bg-accent hover:text-accent-foreground">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-1 h-4 w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+              </svg>
+              View Code
+            </a>
+            <a href="#" class="text-xs inline-flex items-center justify-center rounded-md h-8 px-3 font-medium bg-primary text-primary-foreground shadow-xs hover:bg-primary/90">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-1 h-4 w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+              Live Preview
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-12 flex justify-center">
+      <a href="#" class="group inline-flex items-center justify-center rounded-md border bg-background h-10 px-6 font-medium shadow-xs hover:bg-accent hover:text-accent-foreground">
+        View All Projects
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section> 

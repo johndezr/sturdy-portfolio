@@ -1,13 +1,14 @@
 // @ts-check
-import path from "path";
-import { defineConfig } from "astro/config";
-import tailwindcss from "@tailwindcss/vite";
-import sitemap from "@astrojs/sitemap";
-import partytown from "@astrojs/partytown";
-import { fileURLToPath } from "url";
-import vercel from "@astrojs/vercel";
+import path from 'path';
+import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
+import partytown from '@astrojs/partytown';
+import { fileURLToPath } from 'url';
+import vercel from '@astrojs/vercel';
+import vue from '@astrojs/vue';
 
-const SITE_URL = "https://tu-dominio.com";
+const SITE_URL = 'https://test.com';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
@@ -15,39 +16,40 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, "./src"),
+        '@': path.resolve(__dirname, './src'),
       },
     },
     plugins: [tailwindcss()],
   },
-  output: "static",
+  output: 'static',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
     },
   }),
   i18n: {
-    locales: ["es", "en"],
-    defaultLocale: "en",
+    locales: ['es', 'en'],
+    defaultLocale: 'en',
   },
   site: SITE_URL,
   integrations: [
+    vue(),
     sitemap({
       i18n: {
-        defaultLocale: "es",
+        defaultLocale: 'es',
         locales: {
-          es: "es",
-          en: "en",
+          es: 'es',
+          en: 'en',
         },
       },
-      changefreq: "weekly",
+      changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
     }),
     partytown({
       // Configuración para Google Analytics
       config: {
-        forward: ["dataLayer.push"],
+        forward: ['dataLayer.push'],
       },
     }),
   ],
