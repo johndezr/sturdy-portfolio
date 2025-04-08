@@ -1,37 +1,83 @@
 ---
 import { Button } from '@/components/ui/button';
+import { File, CheckCircle, Target, DollarSign, Users } from 'lucide-vue-next';
+import { Separator } from '@/components/ui/separator';
 ---
 
 <section
   class="relative flex flex-col items-center justify-center p-6 md:pt-42 md:pb-32 lg:pt-48 lg:pb-42"
 >
   <div class="absolute inset-0 -z-10 dark:hidden">
-    <div class="h-full w-full bg-[url('/images/hero-pattern.svg')] bg-cover bg-center"></div>
+    <div class="h-full w-full bg-[url('/images/hero-pattern.svg')]"></div>
   </div>
 
   <div class="container mx-auto max-w-5xl">
     <div class="flex flex-col gap-4 text-center">
       <div class="text-sm md:text-base">
-        <p class="gap-2 text-center font-semibold">
-          Hey, this is Johnny <span class="text-xl">👋</span>
+        <p class="gap-2 text-center font-semibold text-slate-500">
+          Hey, this is Johny <span class="text-xl">👋</span>
         </p>
       </div>
 
       <div class="gap-4 text-center md:gap-6">
         <h1 class="text-4xl font-bold md:text-5xl lg:text-6xl">
-          I Build Scalable &<br /> Interactive Web Experiences 🚀
+          Your partner for crafted software development. 🚀
         </h1>
       </div>
 
-      <div class="mx-auto mt-4 max-w-lg">
-        <p class="text-muted-foreground text-base md:text-lg">
-          I craft scalable, high-performance web applications with clean architecture and modern
-          tech.
+      <div class="mx-auto mt-4 max-w-2xl">
+        <p class="text-base text-slate-500 md:text-lg">
+          From clean code to clean interfaces, this is how <span class="font-bold"
+            >I think, build & grow:</span
+          >
         </p>
       </div>
+      <div class="stats-container mt-6 mb-4 w-full">
+        <div class="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-6">
+          <div class="stat-card flex w-full max-w-xs items-center p-2 md:w-1/3">
+            <div class="stat-content">
+              <p class="text-sm text-slate-900 dark:text-white">
+                <span class="font-bold text-slate-500">🧠 Architecture first:</span> Clarity before code.
+                MVVM, Clean Architecture and DDD.
+              </p>
+            </div>
+          </div>
 
-      <div class="mt-4">
-        <Button> Download CV </Button>
+          <div class="hidden h-8 md:block">
+            <Separator orientation="vertical" />
+          </div>
+
+          <div class="stat-card flex w-full max-w-xs items-center p-2 md:w-1/3">
+            <div class="stat-content">
+              <p class="text-sm text-slate-900 dark:text-white">
+                <span class="font-bold text-slate-500">🔍 Curiosity-driven development:</span> I'm driven
+                by how things work—and how they could work better.
+              </p>
+            </div>
+          </div>
+
+          <div class="hidden h-8 md:block">
+            <Separator orientation="vertical" />
+          </div>
+
+          <div class="stat-card flex w-full max-w-xs items-center p-2 md:w-1/3">
+            <div class="stat-content">
+              <p class="text-sm text-slate-900 dark:text-white">
+                <span class="font-bold text-slate-500">🧪 Pragmatic mindset:</span> I use tests as experiments—TDD,
+                E2E, mocking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-2">
+        <Button class="rounded-full p-6 text-base font-semibold">
+          <a href="/resume.pdf" class="flex items-center gap-2">
+            Download CV
+            <File class="size-4" />
+          </a>
+        </Button>
       </div>
     </div>
   </div>
