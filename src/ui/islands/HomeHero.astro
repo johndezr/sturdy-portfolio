@@ -1,25 +1,25 @@
 ---
 import { Button } from '@/components/ui/button';
-import { File, CheckCircle, Target, DollarSign, Users } from 'lucide-vue-next';
+import { File } from 'lucide-vue-next';
 import { Separator } from '@/components/ui/separator';
 ---
 
 <section
-  class="relative flex flex-col items-center justify-center p-6 md:pt-42 md:pb-32 lg:pt-48 lg:pb-42"
+  class="relative flex flex-col items-center justify-center pt-28 pb-12 md:pt-42 md:pb-32 lg:pt-48 lg:pb-42"
 >
   <div class="absolute inset-0 -z-10 dark:hidden">
     <div class="h-full w-full bg-[url('/images/hero-pattern.svg')]"></div>
   </div>
 
   <div class="container mx-auto max-w-5xl">
-    <div class="flex flex-col gap-4 text-center">
+    <div class="flex flex-col gap-4 text-left md:text-center">
       <div class="text-sm md:text-base">
-        <p class="gap-2 text-center font-semibold text-slate-500">
+        <p class="gap-2 font-semibold text-slate-500">
           Hey, this is Johny <span class="text-xl">👋</span>
         </p>
       </div>
 
-      <div class="gap-4 text-center md:gap-6">
+      <div class="gap-4 md:gap-6">
         <h1 class="text-4xl font-bold md:text-5xl lg:text-6xl">
           Your partner for crafted software development. 🚀
         </h1>
@@ -71,7 +71,7 @@ import { Separator } from '@/components/ui/separator';
         </div>
       </div>
 
-      <div class="mt-2">
+      <div class="mx-auto mt-2">
         <Button class="rounded-full p-6 text-base font-semibold">
           <a href="/resume.pdf" class="flex items-center gap-2">
             Download CV

@@ -1,76 +1,105 @@
 ---
-// About section component
+import { Image } from 'astro:assets';
+import ProfilePic from '@/assets/profile-pic.jpeg';
+import TShaped from '@/ui/islands/HomeTShaped.astro';
 ---
 
-<section id="about" class="dark:bg-background relative py-16 md:py-24">
+<section id="about" class="dark:bg-background relative py-16 md:py-18">
   <div class="container mx-auto max-w-5xl px-4">
     <div class="flex flex-col items-center gap-12 lg:flex-row">
       <div class="flex-1">
-        <h2 class="mb-6 flex items-center text-4xl font-bold">
-          <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="none"
-            ><path
-              d="M 27.5 24 C 27.5 24 10.863 17.495 5 5.5"
-              fill="transparent"
-              stroke-width="3"
-              stroke="rgb(37, 92, 59)"
-              stroke-linecap="round"></path><path
-              d="M 15 12 C 15 12 3.908 7.781 0 0"
-              transform="translate(7.567 23.943) rotate(-27 7.5 6)"
-              fill="transparent"
-              stroke-width="3"
-              stroke="rgb(37, 92, 59)"
-              stroke-linecap="round"></path><path
-              d="M 33.5 16 C 33.5 16 27.5 11.683 27.5 3"
-              fill="transparent"
-              stroke-width="3"
-              stroke="rgb(37, 92, 59)"
-              stroke-linecap="round"></path></svg
-          >
-          A brief of <span class="text-muted-foreground ml-2">who I am</span>
+        <h2 class="mb-6 flex items-center text-3xl font-bold md:text-5xl">
+          <img src="/icons/pre-title.svg" alt="Pre-title" class="mr-2 h-8 w-8" />
+          A brief of <span class="text-primary ml-2">who I am</span>
         </h2>
 
         <div class="space-y-4">
-          <p class="text-muted-foreground">
+          <p class="text-base-foreground">
             My interest in software development was born from a mix between curiosity and desire to
             build useful things.
           </p>
 
-          <p class="text-muted-foreground text-base/6">
-            Today I design before I write a line of code. I like to think about architecture, about
-            users, about how all the pieces fit together. It's not just about making it work, it's
-            about making sense to whoever uses it... and whoever maintains it afterwards.
+          <p class="text-base-foreground text-base/6">
+            I like to think about architecture, about users, about how all the pieces fit together.
+            It's not just about making it work, it's about making sense to whoever uses it... and
+            whoever maintains it afterwards.
           </p>
 
-          <p class="text-muted-foreground text-base/6">
+          <p class="text-base-foreground text-base/6">
             Outside of the keyboard, my curiosity is still active: I explore surfing, country music,
-            and how creative disciplines influence the way we solve problems. I'm interested in how
-            we learn, how we collaborate, and how we can best document that process.
+            and how creative disciplines influence the way we solve problems.
           </p>
-
-          <p class="text-muted-foreground text-base/6">
-            I'm always learning, always evolving, and always looking for the next exciting project
-            to tackle. 🚀
-          </p>
-        </div>
-
-        <div class="mt-8">
-          <h3 class="mb-4 text-lg font-semibold">
-            Here are a few technologies I've been working with recently:
-          </h3>
-          <div class="flex flex-wrap gap-3"></div>
         </div>
       </div>
 
       <div class="flex flex-1 justify-center">
-        <div class="relative w-full max-w-md overflow-hidden rounded-lg">
-          <img
-            src="https://picsum.photos/400/500"
-            alt="John Galindez"
-            class="h-auto w-full rounded-lg shadow-lg"
-          />
-          <div class="bg-primary/10 absolute inset-0 rounded-lg"></div>
+        <div class="flip-card perspective-1000 w-full md:h-[500px] md:w-[400px]">
+          <div class="flip-card-inner">
+            <div class="flip-card-front h-full w-full backface-hidden md:absolute">
+              <Image
+                src={ProfilePic}
+                alt="John Galindez"
+                class="border-secondary h-[400px] max-h-[500px] w-full rounded border-2 shadow-lg grayscale-60 filter transition-all duration-600 hover:grayscale-0 md:h-full md:max-w-[400px]"
+              />
+            </div>
+            <div
+              class="flip-card-back border-secondary from-primary/0 to-primary/15 absolute hidden h-full w-[400px] rotate-y-180 transform rounded border-2 bg-gradient-to-b backface-hidden md:block"
+            >
+              <div class="flex flex-col gap-4 p-8">
+                <h3 class="mb-4 text-center text-2xl font-bold">Secret Info About Me:</h3>
+                <p class="text-base-foreground">
+                  <span class="text-primary font-bold">Age:</span> 28
+                </p>
+                <p class="text-base-foreground">
+                  <span class="text-primary font-bold">Location:</span> San Francisco, CA
+                </p>
+                <p class="text-base-foreground">
+                  <span class="text-primary font-bold">Favorite Color:</span> Blue
+                </p>
+                <p class="text-base-foreground">
+                  <span class="text-primary font-bold">Favorite Food:</span> Pizza
+                </p>
+                <p class="text-base-foreground">
+                  <span class="text-primary font-bold">Favorite Movie:</span> The Dark Knight
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="container mx-auto max-w-5xl px-4">
+    <div class="flex flex-col-reverse items-center gap-6 md:flex-col lg:flex-row">
+      <div class="w-[350px] basis-full md:basis-xl">
+        <TShaped />
+      </div>
+
+      <div class="mt-8 flex flex-1 flex-col gap-6 md:mt-0">
+        <h3 class="text-4xl font-bold">
+          <span class="border-primary border-b-2">T-Shaped</span> Generalist Developer
+        </h3>
+        <p class="text-base-foreground">
+          My skillset goes both deep and wide. I dive deep into frontend engineering—building
+          thoughtful, accessible, and performant interfaces—but I also understand backend systems,
+          design, and product thinking. This gives me a strategic view and helps me collaborate
+          effectively across disciplines.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+</style>

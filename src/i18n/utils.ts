@@ -1,26 +1,13 @@
-import { getCollection } from "astro:content";
-
-// Importar traducciones
-import es from "../i18n/es/common.json";
-import en from "../i18n/en/common.json";
-
-const translations = { es, en };
+import { ui, defaultLang } from './ui';
 
 export function getLangFromUrl(url: URL) {
-  const [, lang] = url.pathname.split("/");
-  if (lang in translations) return lang as keyof typeof translations;
-  return "es";
+  const [, lang] = url.pathname.split('/');
+  if (lang in ui) return lang as keyof typeof ui;
+  return defaultLang;
 }
 
-export function useTranslations(lang: keyof typeof translations) {
-  return function t(key: string) {
-    return getNestedValue(translations[lang], key);
+export function useTranslations(lang: keyof typeof ui) {
+  return function t(key: keyof (typeof ui)[typeof defaultLang]) {
+    return ui[lang][key] || ui[defaultLang][key];
   };
-}
-
-// Función auxiliar para obtener valores anidados usando notación de puntos
-function getNestedValue(obj: any, path: string) {
-  return path.split(".").reduce((prev, curr) => {
-    return prev ? prev[curr] : null;
-  }, obj);
 }

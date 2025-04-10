@@ -33,20 +33,20 @@ const navLinks = [
   <div
     :class="[
       'fixed top-0 right-0 left-0 z-50 mb-4 py-4 transition-all duration-300',
-      scrolled ? 'bg-background/95 shadow-xs backdrop-blur-sm' : 'bg-transparent',
+      scrolled ? 'bg-background-white/90 shadow backdrop-blur-sm' : 'bg-transparent',
     ]"
   >
-    <div class="max-w7xl container mx-auto">
+    <div class="container mx-auto max-w-7xl">
       <nav class="flex items-center justify-between">
         <div class="flex items-center gap-5">
           <a
             href="/"
             class="font-caladea text-2xl font-bold tracking-tight transition-opacity hover:opacity-80"
           >
-            John Galindez
+            johndez.net
           </a>
 
-          <div class="h-6">
+          <div class="hidden h-6 md:block">
             <Separator orientation="vertical" />
           </div>
 
