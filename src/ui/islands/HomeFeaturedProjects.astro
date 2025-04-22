@@ -1,93 +1,55 @@
 ---
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Image } from 'astro:assets';
-import BasekDrive from '@/assets/projects/basek-drive.png';
+import ProjectCard from '@/ui/modules/ProjectCard.astro';
+import ProjectDialog from '@/ui/ProjectDialog.vue';
+import type { Project } from '@/types/project';
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props as Props;
 ---
 
 <section id="projects" class="relative py-16 md:py-24">
   <div class="from-primary/0 to-primary/20 absolute inset-0 -z-10 bg-gradient-to-b"></div>
   <div class="container mx-auto max-w-6xl px-4">
     <div class="mb-12 text-center">
-      <h2 class="mb-4 text-5xl font-bold">Things I’ve built</h2>
+      <h2 class="mb-4 text-5xl font-bold">Things I've built</h2>
       <p class="text-muted-foreground mx-auto max-w-2xl text-base md:text-lg">
         A selection of projects where the code is just the tip of the iceberg.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-      <div class="rounded border border-gray-100 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-        <Image src={BasekDrive} alt="BasekDrive" />
-        <div class="bg-white/25 p-5">
-          <a href="#">
-            <h5 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
-              BasekDrive: Google Drive File Picker for Jupyter Tree
-            </h5>
-          </a>
-          <p class="mb-3 text-sm dark:text-gray-400">
-            Custom file picker built with Next.js 15 that allows retrieving files from Google Drive,
-            indexing, and un-indexing them in the user's storage to later create a knowledge base in
-            Jupyter Notebook.
-          </p>
-          <div class="mb-4 flex flex-wrap gap-2">
-            <img src="/icons/github.svg" alt="Github" class="size-4" />
-            <a href="https://github.com/jgalindez/basekdrive" class="text-sm">View on Github</a>
-          </div>
-          <Badge variant="secondary">Astro</Badge>
-          <Badge variant="secondary">React</Badge>
-          <Badge variant="secondary">Tailwind</Badge>
-        </div>
-      </div>
-
-      <div class="rounded border border-gray-100 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-        <Image src={BasekDrive} alt="BasekDrive" />
-        <div class="bg-white/25 p-5">
-          <a href="#">
-            <h5 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
-              BasekDrive: Google Drive File Picker for Jupyter Tree
-            </h5>
-          </a>
-          <p class="mb-3 text-sm dark:text-gray-400">
-            Custom file picker built with Next.js 15 that allows retrieving files from Google Drive,
-            indexing, and un-indexing them in the user's storage to later create a knowledge base in
-            Jupyter Notebook.
-          </p>
-          <div class="mb-4 flex flex-wrap gap-2">
-            <img src="/icons/github.svg" alt="Github" class="size-4" />
-            <a href="https://github.com/jgalindez/basekdrive" class="text-sm">View on Github</a>
-          </div>
-          <Badge variant="secondary">Astro</Badge>
-          <Badge variant="secondary">React</Badge>
-          <Badge variant="secondary">Tailwind</Badge>
-        </div>
-      </div>
-
-      <div class="rounded border border-gray-100 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-        <Image src={BasekDrive} alt="BasekDrive" />
-        <div class="bg-white/25 p-5">
-          <a href="#">
-            <h5 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
-              BasekDrive: Google Drive File Picker for Jupyter Tree
-            </h5>
-          </a>
-          <p class="mb-3 text-sm dark:text-gray-400">
-            Custom file picker built with Next.js 15 that allows retrieving files from Google Drive,
-            indexing, and un-indexing them in the user's storage to later create a knowledge base in
-            Jupyter Notebook.
-          </p>
-          <div class="mb-4 flex flex-wrap gap-2">
-            <img src="/icons/github.svg" alt="Github" class="size-4" />
-            <a href="https://github.com/jgalindez/basekdrive" class="text-sm">View on Github</a>
-          </div>
-          <Badge variant="secondary">Astro</Badge>
-          <Badge variant="secondary">React</Badge>
-          <Badge variant="secondary">Tailwind</Badge>
-        </div>
-      </div>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3" id="projects-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
     </div>
 
     <div class="mt-12 flex justify-center">
-      <Button variant="secondary" class="rounded-full font-bold">View all projects</Button>
+      <a href="/projects">
+        <Button variant="secondary" class="rounded-full font-bold">View all projects</Button>
+      </a>
     </div>
   </div>
+
+  <ProjectDialog client:load />
 </section>
+
+<script>
+  import { selectedProject, openProjectDialog } from '@/stores/projects';
+  import { ProjectService } from '@/services/projects';
+
+  document.addEventListener('selectProject', async (e: CustomEvent<{ slug: string }>) => {
+    const { slug } = e.detail;
+    if (!slug) return;
+
+    try {
+      const project = await ProjectService.getProject(slug);
+      selectedProject.set(project);
+      openProjectDialog.set(true);
+    } catch (error) {
+      console.error('Error in project selection:', error);
+    }
+  });
+</script>

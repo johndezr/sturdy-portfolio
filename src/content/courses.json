@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "year": "2025",
+    "status": "In Progress",
+    "title": "The AI Engineer Path - Build apps powered by generative AI",
+    "technologies": ["AI", "Web Development"],
+    "school": "Scrimba"
+  },
+  {
+    "id": "2",
+    "year": "2025",
+    "status": "In Progress",
+    "title": "FastAPI - Advanced",
+    "technologies": ["Python", "FastAPI", "API"],
+    "school": "Udemy"
+  },
+  {
+    "id": "3",
+    "year": "2025",
+    "status": "Completed",
+    "title": "Strategic Thinking",
+    "technologies": ["Business", "Strategy", "Leadership"],
+    "school": "Platzi",
+    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+  },
+  {
+    "id": "4",
+    "year": "2025",
+    "status": "Completed",
+    "title": "Soft Skills for Professional Development",
+    "technologies": ["Communication", "Leadership", "Teamwork"],
+    "school": "Platzi",
+    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+  },
+  {
+    "id": "5",
+    "year": "2025",
+    "status": "Completed",
+    "title": "Business Strategy Design with IA",
+    "technologies": ["AI", "Business", "Strategy"],
+    "school": "Platzi",
+    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+  },
+  {
+    "id": "6",
+    "year": "2025",
+    "status": "Completed",
+    "title": "Prompt Engineering for Web Developers",
+    "technologies": ["AI", "Web Development"],
+    "school": "Scrimba",
+    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+  },
+  {
+    "id": "7",
+    "year": "2025",
+    "status": "Completed",
+    "title": "Advanced JavaScript",
+    "technologies": ["JavaScript", "Web Development"],
+    "school": "Scrimba",
+    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+  },
+  {
+    "id": "8",
+    "year": "2025",
+    "status": "Completed",
+    "title": "Build Reusable React Components",
+    "technologies": ["JavaScript", "Web Development"],
+    "school": "Scrimba",
+    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+  },
+  {
+    "id": "9",
+    "year": "2025",
+    "status": "Completed",
+    "title": "Arquitectura Software Moderna: DDD, Eventos, Microservicios",
+    "technologies": ["JavaScript", "Web Development"],
+    "school": "Udemy ",
+    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+  },
+  {
+    "id": "11",
+    "year": "2020",
+    "status": "Completed",
+    "title": "Advanced CSS and Sass: Flexbox, Grid",
+    "technologies": ["JavaScript", "Web Development"],
+    "school": "Udemy",
+    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+  }
+]

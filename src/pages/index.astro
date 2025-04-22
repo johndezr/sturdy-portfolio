@@ -3,11 +3,14 @@ import MainLayout from '@/layouts/MainLayout.astro';
 import Hero from '@/ui/islands/HomeHero.astro';
 import About from '@/ui/islands/HomeAbout.astro';
 import FeaturedProjects from '@/ui/islands/HomeFeaturedProjects.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const featuredProjects = allProjects.filter((project) => project.data.featured);
 ---
 
 <MainLayout title="John Galindez - Portfolio">
-	<Hero />
-	<About />
-	<FeaturedProjects />	
+  <Hero />
+  <About />
+  <FeaturedProjects projects={featuredProjects} />
 </MainLayout>
-

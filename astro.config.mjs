@@ -27,10 +27,6 @@ export default defineConfig({
       enabled: true,
     },
   }),
-  i18n: {
-    locales: ['es', 'en'],
-    defaultLocale: 'en',
-  },
   site: SITE_URL,
   integrations: [
     vue(),

@@ -7,33 +7,37 @@ import { Menu, Calendar, Phone } from 'lucide-vue-next';
 
 const scrolled = ref(false);
 const isOpen = ref(false);
+const isActive = ref(false);
 
 const handleScroll = () => {
   scrolled.value = window.scrollY > 10;
 };
 
+const navLinks = ref([
+  { text: 'Home', url: '/' },
+  { text: 'Experience', url: '/experience' },
+  { text: 'Projects', url: '/projects' },
+  { text: 'School', url: '/school' },
+  { text: 'Blog', url: '/blog' },
+]);
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+  navLinks.value.forEach((link) => {
+    link.isActive = link.url === window.location.pathname;
+  });
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
-
-const navLinks = [
-  { text: 'Home', url: '/' },
-  { text: 'Experience', url: '/#experience' },
-  { text: 'Projects', url: '/#projects' },
-  { text: 'Certificates', url: '/#certificates' },
-  { text: 'Blog', url: '/blog' },
-];
 </script>
 
 <template>
   <div
     :class="[
-      'fixed top-0 right-0 left-0 z-50 mb-4 py-4 transition-all duration-300',
-      scrolled ? 'bg-background-white/90 shadow backdrop-blur-sm' : 'bg-transparent',
+      'fixed top-0 right-0 left-0 z-50 mb-4 bg-white/50 py-4 shadow backdrop-blur-sm transition-all duration-300',
+      scrolled ? 'bg-white/50 shadow backdrop-blur-sm' : 'bg-transparent',
     ]"
   >
     <div class="container mx-auto max-w-7xl">
@@ -55,7 +59,9 @@ const navLinks = [
               v-for="link in navLinks"
               :key="link.text"
               :href="link.url"
-              class="hover:text-primary/80 text-sm font-semibold transition-colors"
+              :class="`hover:text-primary/80 text-sm font-semibold transition-colors ${
+                link.isActive ? 'text-primary' : 'text-foreground'
+              }`"
             >
               {{ link.text }}
             </a>
@@ -66,8 +72,7 @@ const navLinks = [
           <a
             href="https://github.com/johndezr"
             target="_blank"
-            rel="noopener noreferrer"
-            class="text-foreground hover:text-primary/80 transition-colors"
+            class="text-foreground hover:text-primary/80"
             aria-label="GitHub"
           >
             <img src="/icons/github.svg" alt="GitHub" />
@@ -75,8 +80,7 @@ const navLinks = [
           <a
             href="https://linkedin.com/in/johngalindez"
             target="_blank"
-            rel="noopener noreferrer"
-            class="text-foreground hover:text-primary/80 transition-colors"
+            class="text-foreground hover:text-primary/80"
             aria-label="LinkedIn"
           >
             <img src="/icons/linkedin.svg" alt="LinkedIn" />
@@ -107,7 +111,7 @@ const navLinks = [
                 v-for="link in navLinks"
                 :key="link.text"
                 :href="link.url"
-                class="hover:text-primary/80 text-lg font-medium transition-colors"
+                class="hover:text-primary/80 text-lg font-medium"
                 @click="isOpen = false"
               >
                 {{ link.text }}
@@ -117,8 +121,7 @@ const navLinks = [
                 <a
                   href="https://github.com/johndezr"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-foreground hover:text-primary/80 transition-colors"
+                  class="text-foreground hover:text-primary/80"
                   aria-label="GitHub"
                 >
                   <img src="/icons/github.svg" alt="GitHub" />
@@ -126,7 +129,6 @@ const navLinks = [
                 <a
                   href="https://linkedin.com/in/johngalindez"
                   target="_blank"
-                  rel="noopener noreferrer"
                   class="text-foreground hover:text-primary/80 transition-colors"
                   aria-label="LinkedIn"
                 >

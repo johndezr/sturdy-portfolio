@@ -1,0 +1,43 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { Separator } from '@/components/ui/separator';
+import ProjectCard from '@/ui/modules/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+const featuredProjects = projects.filter((project) => project.data.featured);
+---
+
+<MainLayout title="Experience" description="Experience">
+  <section class="relative flex flex-col items-center justify-center pt-24 md:pt-36 md:pb-12">
+    <div class="container mx-auto max-w-6xl px-4">
+      <div>
+        <h1 class="flex text-4xl font-bold md:text-5xl lg:text-6xl">
+          <img src="/icons/pre-title.svg" alt="Pre-title" class="mr-2 h-8 w-8" />
+          The <span class="text-primary ml-2">Projects</span>
+        </h1>
+        <Separator class="my-4 max-w-sm" />
+        <p class="text-muted-foreground max-w-2xl text-sm md:text-base">
+          Here are some of the projects I've worked on. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quisquam, quos.
+        </p>
+      </div>
+      <h2 class="my-6 text-2xl font-bold">Featured:</h2>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      </div>
+      <div class="mt-12 flex flex-col items-center justify-center">
+        <h3 class="text-bold text-sm md:text-xl">
+          More projects are cooking up in my <a
+            class="text-bold inline-block hover:underline"
+            href="https://github.com/johndez"
+            target="_blank"
+          >
+            <img src="/icons/github.svg" alt="GitHub" class="mb-1 ml-2 inline-block h-4 w-4" />
+            GitHub.
+          </a>
+        </h3>
+      </div>
+    </div>
+  </section>
+</MainLayout>

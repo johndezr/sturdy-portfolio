@@ -1,0 +1,81 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { Separator } from '@/components/ui/separator';
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
+import { ExternalLink } from 'lucide-vue-next';
+import { getCollection } from 'astro:content';
+import { Badge } from '@/components/ui/badge';
+
+const courses = await getCollection('courses');
+---
+
+<MainLayout title="School" description="School">
+  <section class="relative flex flex-col items-center justify-center pt-24 md:pt-36 md:pb-12">
+    <div class="container mx-auto max-w-6xl px-4">
+      <div>
+        <h1 class="flex text-4xl font-bold md:text-5xl lg:text-6xl">
+          <img src="/icons/pre-title.svg" alt="Pre-title" class="mr-2 h-8 w-8" />
+          The <span class="text-primary ml-2">School</span>
+        </h1>
+        <Separator class="my-4 max-w-sm" />
+        <p class="text-muted-foreground max-w-2xl text-sm md:text-base">
+          Here are some of the schools I've attended. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quisquam, quos.
+        </p>
+      </div>
+      <Table class="mt-8">
+        <TableCaption class="text-muted-foreground mt-4">
+          A list of my educational journey and certifications.
+        </TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHead class="w-[100px]">Year</TableHead>
+            <TableHead>Status</TableHead>
+            <TableHead>Title</TableHead>
+            <TableHead>Technologies</TableHead>
+            <TableHead>School</TableHead>
+            <TableHead class="text-center">Certification</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {
+            courses.map(({ data }) => (
+              <TableRow class="hover:bg-muted/50 h-18">
+                <TableCell class="font-medium">{data.year}</TableCell>
+                <TableCell>{data.status}</TableCell>
+                <TableCell class="font-bold">{data.title}</TableCell>
+                <TableCell>
+                  {data.technologies.map((tec) => (
+                    <Badge class="mr-2 rounded-full font-bold" variant="secondary">
+                      {tec}
+                    </Badge>
+                  ))}
+                </TableCell>
+                <TableCell>{data.school}</TableCell>
+                <TableCell>
+                  {data.certificationUrl && (
+                    <a
+                      href={data.certificationUrl}
+                      target="_blank"
+                      class="text-primary hover:text-primary/80 mr-auto flex items-center justify-center"
+                    >
+                      <ExternalLink class="mr-2 h-4 w-4" /> Link
+                    </a>
+                  )}
+                </TableCell>
+              </TableRow>
+            ))
+          }
+        </TableBody>
+      </Table>
+    </div>
+  </section>
+</MainLayout>

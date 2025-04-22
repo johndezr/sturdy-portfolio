@@ -1,0 +1,11 @@
+{
+  "emmet.includeLanguages": {
+    "astro": "html",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "astro": "html"
+  },
+  "emmet.triggerExpansionOnTab": true
+} 

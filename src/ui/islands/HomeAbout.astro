@@ -33,46 +33,18 @@ import TShaped from '@/ui/islands/HomeTShaped.astro';
       </div>
 
       <div class="flex flex-1 justify-center">
-        <div class="flip-card perspective-1000 w-full md:h-[500px] md:w-[400px]">
-          <div class="flip-card-inner">
-            <div class="flip-card-front h-full w-full backface-hidden md:absolute">
-              <Image
-                src={ProfilePic}
-                alt="John Galindez"
-                class="border-secondary h-[400px] max-h-[500px] w-full rounded border-2 shadow-lg grayscale-60 filter transition-all duration-600 hover:grayscale-0 md:h-full md:max-w-[400px]"
-              />
-            </div>
-            <div
-              class="flip-card-back border-secondary from-primary/0 to-primary/15 absolute hidden h-full w-[400px] rotate-y-180 transform rounded border-2 bg-gradient-to-b backface-hidden md:block"
-            >
-              <div class="flex flex-col gap-4 p-8">
-                <h3 class="mb-4 text-center text-2xl font-bold">Secret Info About Me:</h3>
-                <p class="text-base-foreground">
-                  <span class="text-primary font-bold">Age:</span> 28
-                </p>
-                <p class="text-base-foreground">
-                  <span class="text-primary font-bold">Location:</span> San Francisco, CA
-                </p>
-                <p class="text-base-foreground">
-                  <span class="text-primary font-bold">Favorite Color:</span> Blue
-                </p>
-                <p class="text-base-foreground">
-                  <span class="text-primary font-bold">Favorite Food:</span> Pizza
-                </p>
-                <p class="text-base-foreground">
-                  <span class="text-primary font-bold">Favorite Movie:</span> The Dark Knight
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Image
+          src={ProfilePic}
+          alt="John Galindez"
+          class="border-secondary h-[400px] max-h-[500px] w-full rounded border-2 shadow-lg grayscale-10 filter transition-all duration-600 md:h-full md:max-w-[400px]"
+        />
       </div>
     </div>
   </div>
   <div class="container mx-auto max-w-5xl px-4">
     <div class="flex flex-col-reverse items-center gap-6 md:flex-col lg:flex-row">
       <div class="w-[350px] basis-full md:basis-xl">
-        <TShaped />
+        <TShaped transition:persist />
       </div>
 
       <div class="mt-8 flex flex-1 flex-col gap-6 md:mt-0">
@@ -82,24 +54,12 @@ import TShaped from '@/ui/islands/HomeTShaped.astro';
         <p class="text-base-foreground">
           My skillset goes both deep and wide. I dive deep into frontend engineering—building
           thoughtful, accessible, and performant interfaces—but I also understand backend systems,
-          design, and product thinking. This gives me a strategic view and helps me collaborate
-          effectively across disciplines.
+          design, and product thinking.
+        </p>
+        <p class="text-base-foreground">
+          This gives me a strategic view and helps me collaborate effectively across disciplines.
         </p>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-</style>

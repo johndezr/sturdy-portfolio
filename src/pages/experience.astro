@@ -1,0 +1,29 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { Separator } from '@/components/ui/separator';
+import ExperienceTimeline from '@/ui/islands/ExperienceTimeline.astro';
+
+import { getCollection } from 'astro:content';
+
+const jobs = await getCollection('jobs');
+const sortedJobs = jobs.sort((a, b) => b.data.order - a.data.order);
+---
+
+<MainLayout title="Experience" description="Experience">
+  <section class="relative flex flex-col items-center justify-center pt-24 md:pt-36 md:pb-12">
+    <div class="container mx-auto max-w-6xl px-4">
+      <div>
+        <h1 class="flex text-4xl font-bold md:text-5xl lg:text-6xl">
+          <img src="/icons/pre-title.svg" alt="Pre-title" class="mr-2 h-8 w-8" />
+          The <span class="text-primary ml-2">Experience</span>
+        </h1>
+        <Separator class="my-4 max-w-sm" />
+        <p class="text-muted-foreground max-w-2xl text-sm md:text-base">
+          I've been working as a software developer for over 10 years. I've worked in different
+          companies and in different roles. I've learned a lot and I'm still learning.
+        </p>
+      </div>
+      <ExperienceTimeline jobs={sortedJobs} />
+    </div>
+  </section>
+</MainLayout>

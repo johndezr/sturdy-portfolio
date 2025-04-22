@@ -2,10 +2,10 @@
 import '@/styles/global.css';
 import '@/styles/fonts.css';
 
-import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import Footer from '@/layouts/Footer.astro';
 import HeadSEO from '@/layouts/HeadSEO.astro';
 import Navbar from '@/ui/Navbar.vue';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -14,18 +14,17 @@ interface Props {
 }
 
 const { title, description, image } = Astro.props;
-
-const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang={lang} class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <HeadSEO title={title} description={description} />
-  <body>
+  <body class="flex min-h-screen flex-col">
     <header>
       <Navbar client:load />
+      <ClientRouter />
     </header>
-    <main>
+    <main class="flex-grow">
       <slot />
     </main>
     <Footer />
