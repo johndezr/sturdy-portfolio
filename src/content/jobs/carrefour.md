@@ -1,15 +1,15 @@
 ---
 company: Carrefour
-role: Frontend Lead
-date: 2019- 2020
+role: Frontend Lead, Madrid
+date: Jan 2019 - Dec 2020
 order: 2
-description: Technical leader and front-end architect. One of the projects I had to lead was the creation of a component catalog made with Vue.js. My role was to manage a team of 4 people and architect the project.
+description: Technical and architectural leader in the construction of a component catalog that allowed +10 applications in production with hundreds of recurring users to embed it, thus achieving an effective visualization in each one of them.
 technologies:
-  - React Native
+  - Vue
   - Typescript
-  - DDD
-  - Next.js
-  - MVVM
-  - React Testing
-  - Tanstack Query
+  - Storyblok
+  - Web Components
+  - Semantic Tokens
+  - NPM Package
+  - Material Design
 ---

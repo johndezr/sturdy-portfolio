@@ -6,6 +6,7 @@ export interface Project {
   technologies: string[];
   slug: string;
   image?: string;
+  logo?: string;
 }
 
 export interface ProjectError {

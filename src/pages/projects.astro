@@ -3,6 +3,7 @@ import MainLayout from '@/layouts/MainLayout.astro';
 import { Separator } from '@/components/ui/separator';
 import ProjectCard from '@/ui/modules/ProjectCard.astro';
 import { getCollection } from 'astro:content';
+import ProjectDialog from '@/ui/ProjectDialog.vue';
 
 const projects = await getCollection('projects');
 const featuredProjects = projects.filter((project) => project.data.featured);
@@ -39,5 +40,24 @@ const featuredProjects = projects.filter((project) => project.data.featured);
         </h3>
       </div>
     </div>
+    <ProjectDialog client:load />
   </section>
 </MainLayout>
+
+<script>
+  import { selectedProject, openProjectDialog } from '@/stores/projects';
+  import { ProjectService } from '@/services/projects';
+
+  document.addEventListener('selectProject', async (e: CustomEvent<{ slug: string }>) => {
+    const { slug } = e.detail;
+    if (!slug) return;
+
+    try {
+      const project = await ProjectService.getProject(slug);
+      selectedProject.set(project);
+      openProjectDialog.set(true);
+    } catch (error) {
+      console.error('Error in project selection:', error);
+    }
+  });
+</script>

@@ -3,7 +3,10 @@ import { Badge } from '@/components/ui/badge';
 import type { Experience } from '@/types/experiences';
 
 interface ExperienceTimelineProps {
-  jobs: Experience[];
+  jobs: {
+    data: Experience;
+    order: number;
+  }[];
 }
 
 const { jobs } = Astro.props as ExperienceTimelineProps;
@@ -15,14 +18,14 @@ const { jobs } = Astro.props as ExperienceTimelineProps;
       <div class="group relative py-6 pl-8 sm:pl-32">
         <h3 class="text-muted-foreground mb-1 text-2xl font-bold sm:mb-0">{job.data.company}</h3>
         <div class="after:border-muted after:bg-primary mb-1 flex flex-col items-start before:absolute before:left-2 before:h-full before:-translate-x-1/2 before:translate-y-3 before:self-start before:bg-slate-200 before:px-px group-last:before:hidden after:absolute after:left-2 after:box-content after:h-2 after:w-2 after:-translate-x-1/2 after:translate-y-1.5 after:rounded-full after:border-4 sm:flex-row sm:before:left-0 sm:before:ml-[6.5rem] sm:after:left-0 sm:after:ml-[6.5rem]">
-          <time class="bg-secondary text-secondary-700 left-0 mb-3 inline-flex h-6 w-20 translate-y-0.5 items-center justify-center rounded-full text-xs font-semibold uppercase sm:absolute sm:mb-0">
+          <time class="text-secondary-700 -left-16 mb-3 inline-flex h-6 w-40 translate-y-0.5 items-center justify-center rounded-full text-xs font-semibold sm:absolute sm:mb-0">
             {job.data.date}
           </time>
           <h4 class="text-foreground-primary text-xl font-bold">{job.data.role}</h4>
         </div>
         <p class="text-foreground-secondary text-sm">{job.data.description}</p>
         <div class="mt-4 flex flex-wrap gap-2">
-          {job.data.technologies.map((technology) => (
+          {job.data.technologies.map((technology: string) => (
             <Badge
               class="from-secondary to-secondary/80 rounded-full bg-gradient-to-r font-bold"
               variant="outline"

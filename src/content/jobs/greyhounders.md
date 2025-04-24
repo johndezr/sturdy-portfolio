@@ -1,15 +1,16 @@
 ---
 company: Greyhounders
-role: CTO
-date: 2019- 2021
+role: Software Engineer (CTO), Madrid
+date: Feb 2020 - Nov 2021
 order: 3
-description: My first experience as an entrepreneur, creating the e-commerce from scratch with Nuxt.js and then with Shopify, helping the founding team to make business-technology decisions, among other things.
+description: Built the SSR e-commerce from scratch with Nuxt.js, helping the founding team to make business-technology decisions, making a big impact on the optical industry through AR.
 technologies:
-  - React Native
-  - Typescript
-  - DDD
-  - Next.js
+  - Nuxt
+  - Digital Ocean
+  - CI/CD
+  - Jest
   - MVVM
-  - React Testing
-  - Tanstack Query
+  - Webhooks
+  - Shopify
+  - Wordpress
 ---

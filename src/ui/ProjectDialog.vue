@@ -26,7 +26,7 @@ const handleClose = () => {
   <Dialog :open="isOpen" @update:open="handleClose">
     <DialogContent class="sm:max-w-[600px] md:max-w-[900px]">
       <DialogHeader>
-        <DialogTitle class="text-2xl font-bold">{{ project.title }}</DialogTitle>
+        <DialogTitle class="text-2xl font-bold">📌 {{ project.title }}</DialogTitle>
         <p class="text-muted-foreground text-sm" v-html="project.description" />
       </DialogHeader>
 
@@ -46,25 +46,19 @@ const handleClose = () => {
             </div>
           </div>
           <img v-else src="/images/projects/basek-drive.png" alt="Basek Drive" />
-          <h3 class="mt-4 text-lg font-bold">Descripción</h3>
-          <DialogDescription v-html="project.description" />
-          <p class="mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam doloribus architecto
-            excepturi eligendi! Nam iure vel deserunt labore at? Distinctio eaque error a rerum in
-            debitis obcaecati? Maxime, quo repellendus.
-          </p>
-          <p class="mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic corrupti aliquid
-            facilis ad blanditiis illum est, ipsum doloremque voluptas iste odit? Consequatur itaque
-            animi optio odio accusamus non repudiandae!
-          </p>
         </div>
         <div class="col-span-1 gap-2 px-2">
           <div class="mb-4">
-            <h4 class="mb-2 font-bold">Estado</h4>
-            <Badge variant="outline">Terminado</Badge>
+            <h4 class="mb-2 font-bold">Status:</h4>
+            <Badge variant="outline">{{ project.status }}</Badge>
           </div>
-          <h4 class="mb-2 font-bold">Technologies</h4>
+          <div class="my-4">
+            <h4 class="mb-2 font-bold">Have a look:</h4>
+            <a :href="project.link" target="_blank" class="text-muted-foreground text-sm">
+              <img src="/icons/github.svg" alt="Github" class="w-6" />
+            </a>
+          </div>
+          <h4 class="mb-2 font-bold">Tech stack:</h4>
           <div class="mb-4 flex flex-wrap gap-2">
             <Badge
               v-for="tech in project.technologies"
@@ -78,6 +72,7 @@ const handleClose = () => {
           <Separator />
         </div>
       </div>
+      <div class="my-4 flex flex-col gap-2" v-html="project.content" />
     </DialogContent>
   </Dialog>
 </template>

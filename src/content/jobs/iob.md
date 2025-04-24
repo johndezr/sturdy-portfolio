@@ -1,15 +1,15 @@
 ---
 company: IOBuilders
-role: Software Engineer
-date: 2023 - 2024
-order: 4
-description: Leading multiple projects in the blockchain field, I have collaborated with one of the most important clients of the company developing interfaces and new web features.
+role: Software Engineer, Remote
+date: Jun 2023 - Oct 2024
+order: 5
+description: Worked for the company's main client in New Zealand (Veve), developing important features for different web and mobile applications.
 technologies:
   - React Native
-  - Typescript
+  - Next
+  - Tailwind
   - DDD
-  - Next.js
-  - MVVM
   - React Testing
   - Tanstack Query
+  - Web3
 ---

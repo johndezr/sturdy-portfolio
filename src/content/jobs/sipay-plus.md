@@ -1,15 +1,16 @@
 ---
 company: Sipay Plus
-role: Software Engineer
-date: 2016 - 2018
+role: Software Engineer, Madrid
+date: Nov 2016 - Dec 2018
 order: 1
-description: My beginnings as a junior fullstack developer using Vue.js, second in charge of the construction from scratch of the administrative web site where customers could visualize all operations, among other things.
+description:
+  Main front-end dev in the construction of the administrative website for the visualisation of thousands
+  of dynamic banking operations from design to production.
 technologies:
-  - React Native
-  - Typescript
-  - DDD
-  - Next.js
-  - MVVM
-  - React Testing
-  - Tanstack Query
+  - Vue.js
+  - HTML5
+  - Sass
+  - Python
+  - JWT
+  - Jest
 ---

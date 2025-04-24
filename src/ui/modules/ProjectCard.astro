@@ -5,17 +5,17 @@ import type { Project } from '@/types/project';
 import { Image } from 'astro:assets';
 
 interface Props {
-  project: Project;
+  project: {
+    data: Project;
+  };
 }
 
 const { project } = Astro.props;
-
-const data = project?.data;
 ---
 
 <div
   class="group bg-secondary relative flex-shrink-0 cursor-pointer overflow-hidden rounded-lg shadow-lg"
-  data-project-slug={data.slug}
+  data-project-slug={project.data.slug}
 >
   <svg
     class="absolute bottom-0 left-0 mb-4 scale-150 transition-transform group-hover:scale-[2.65]"
@@ -37,16 +37,16 @@ const data = project?.data;
   <div
     class="relative flex items-center justify-center px-4 pt-4 transition-transform group-hover:scale-110"
   >
-    <Image class="relative w-50" src={data.logo} alt={data.title} />
+    <Image class="relative w-50" src={project.data.logo} alt={project.data.title} />
   </div>
   <div class="px-8 py-4">
     <h3 class="border-primary text-foreground mb-4 w-fit border-b-1 text-center text-xl font-bold">
-      {data.title}
+      {project.data.title}
     </h3>
-    <p class="text-foreground mb-2 block pb-2 text-sm" set:html={data.description} />
+    <p class="text-foreground mb-2 block pb-2 text-sm" set:html={project.data.description} />
     <div class="flex flex-wrap gap-1 pb-6">
       {
-        data.technologies.map((tech) => (
+        project.data.technologies.slice(0, 4).map((tech: string) => (
           <Badge class="bg-foreground rounded-2xl font-bold text-white" variant="outline">
             {tech}
           </Badge>
@@ -55,24 +55,24 @@ const data = project?.data;
     </div>
     <div class="flex justify-between">
       <p class="z-10 cursor-pointer text-sm hover:underline">
-        <BookOpen class="inline-block size-4" /> Case Study
+        <BookOpen class="inline-block size-4" /> Resume
       </p>
       <div class="mb-4 flex flex-wrap justify-end gap-2">
         {
-          data.github && (
-            <a href={data.github} target="_blank" class="z-10 text-xs" data-link>
+          project.data.github && (
+            <a href={project.data.github} target="_blank" class="z-10 text-xs" data-link>
               <img src="/icons/github.svg" alt="Github" class="size-5" />
             </a>
           )
         }
         {
-          data.link && (
-            <a href={data.link} target="_blank" class="text-xs" data-link>
+          project.data.link && (
+            <a href={project.data.link} target="_blank" class="text-xs" data-link>
               <ExternalLink class="size-5" />
             </a>
           )
         }
-        <a href={data.link} class="text-xs" data-link>
+        <a href={project.data.link} class="text-xs" data-link>
           <Share2 class="size-5" />
         </a>
       </div>

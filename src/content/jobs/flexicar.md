@@ -1,15 +1,14 @@
 ---
 company: Flexicar
-role: Frontend Lead
-date: 2022- 2024
-order: 5
-description: Main leader of the web portal, in addition to promoting the development and production of it, I had to lead a team of developers to update and maintain the most important web portal of the company.
+role: Frontend Lead, Remote
+date: Dec 2021 - May 2023
+order: 4
+description: Deployment and development to production of the company's main website with hundreds of thousands of users and bookings per month. I worked closely with other areas of the company to ensure the portal was aligned with strategic objectives.
 technologies:
-  - React Native
-  - Typescript
-  - DDD
-  - Next.js
+  - Next
+  - Jenkins
+  - Tailwind
   - MVVM
   - React Testing
-  - Tanstack Query
+  - Nest
 ---
