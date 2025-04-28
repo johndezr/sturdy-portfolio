@@ -4,7 +4,7 @@
     "year": "2025",
     "status": "In Progress",
     "title": "The AI Engineer Path - Build apps powered by generative AI",
-    "technologies": ["AI", "Web Development"],
+    "technologies": ["Vector DB", "Generative AI", "Fundamentals"],
     "school": "Scrimba"
   },
   {
@@ -12,7 +12,7 @@
     "year": "2025",
     "status": "In Progress",
     "title": "FastAPI - Advanced",
-    "technologies": ["Python", "FastAPI", "API"],
+    "technologies": ["Python", "MVC", "REST"],
     "school": "Udemy"
   },
   {
@@ -22,7 +22,7 @@
     "title": "Strategic Thinking",
     "technologies": ["Business", "Strategy", "Leadership"],
     "school": "Platzi",
-    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+    "certificationUrl": "https://github.com/johndezr/certs/blob/main/diploma-pensamiento-estrategico.pdf"
   },
   {
     "id": "4",
@@ -31,7 +31,7 @@
     "title": "Soft Skills for Professional Development",
     "technologies": ["Communication", "Leadership", "Teamwork"],
     "school": "Platzi",
-    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+    "certificationUrl": "https://github.com/johndezr/certs/blob/main/diploma-habilidades-blandas.pdf"
   },
   {
     "id": "5",
@@ -40,51 +40,51 @@
     "title": "Business Strategy Design with IA",
     "technologies": ["AI", "Business", "Strategy"],
     "school": "Platzi",
-    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+    "certificationUrl": "https://github.com/johndezr/certs/blob/main/diploma-estrategias-negocios-ia.pdf"
   },
   {
     "id": "6",
     "year": "2025",
     "status": "Completed",
     "title": "Prompt Engineering for Web Developers",
-    "technologies": ["AI", "Web Development"],
+    "technologies": ["AI", "Prompt Engineering"],
     "school": "Scrimba",
-    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+    "certificationUrl": "https://github.com/johndezr/certs/blob/main/prompt-engineering-for-web-developers.pdf"
   },
   {
     "id": "7",
     "year": "2025",
     "status": "Completed",
     "title": "Advanced JavaScript",
-    "technologies": ["JavaScript", "Web Development"],
+    "technologies": ["OOP", "Fundamentals", "Promises"],
     "school": "Scrimba",
-    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+    "certificationUrl": "https://github.com/johndezr/certs/blob/main/advanced-javascript.pdf"
   },
   {
     "id": "8",
     "year": "2025",
     "status": "Completed",
     "title": "Build Reusable React Components",
-    "technologies": ["JavaScript", "Web Development"],
+    "technologies": ["React", "Web Components"],
     "school": "Scrimba",
-    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+    "certificationUrl": "https://github.com/johndezr/certs/blob/main/build-reusable-react-components.pdf"
   },
   {
     "id": "9",
     "year": "2025",
     "status": "Completed",
     "title": "Arquitectura Software Moderna: DDD, Eventos, Microservicios",
-    "technologies": ["JavaScript", "Web Development"],
+    "technologies": ["DDD", "Microservices", "Event-Driven"],
     "school": "Udemy ",
-    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+    "certificationUrl": "https://github.com/johndezr/certs/blob/main/arquitectura-moderna.pdf/"
   },
   {
     "id": "11",
     "year": "2020",
     "status": "Completed",
     "title": "Advanced CSS and Sass: Flexbox, Grid",
-    "technologies": ["JavaScript", "Web Development"],
+    "technologies": ["CSS", "Flexbox", "Grid"],
     "school": "Udemy",
-    "certificationUrl": "https://www.udemy.com/certificate/UC-00000000000000000000000000000000/"
+    "certificationUrl": "https://github.com/johndezr/certs/blob/main/advanced-css-sass-flexbox-grid.pdf"
   }
 ]

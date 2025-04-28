@@ -7,6 +7,8 @@ export interface Project {
   slug: string;
   image?: string;
   logo?: string;
+  content: string;
+  loom?: string;
 }
 
 export interface ProjectError {

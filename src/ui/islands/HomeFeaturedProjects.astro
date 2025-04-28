@@ -12,7 +12,7 @@ interface Props {
 const { projects } = Astro.props as Props;
 ---
 
-<section id="projects" class="relative py-16 md:py-24">
+<section id="projects" class="relative py-16">
   <div class="from-primary/0 to-primary/20 absolute inset-0 -z-10 bg-gradient-to-b"></div>
   <div class="container mx-auto max-w-6xl px-4">
     <div class="mb-12 text-center">
@@ -46,6 +46,7 @@ const { projects } = Astro.props as Props;
 
     try {
       const project = await ProjectService.getProject(slug);
+      console.log(project);
       selectedProject.set(project);
       openProjectDialog.set(true);
     } catch (error) {

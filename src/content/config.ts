@@ -16,6 +16,7 @@ const projects = defineCollection({
       slug: z.string(),
       loom: z.string().optional(),
       logo: image(),
+      image: z.string().optional(),
     }),
 });
 

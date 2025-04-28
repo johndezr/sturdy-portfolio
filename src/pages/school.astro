@@ -26,15 +26,12 @@ const courses = await getCollection('courses');
           The <span class="text-primary ml-2">School</span>
         </h1>
         <Separator class="my-4 max-w-sm" />
-        <p class="text-muted-foreground max-w-2xl text-sm md:text-base">
-          Here are some of the schools I've attended. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quisquam, quos.
+        <p class="text-muted-foreground max-w-2xl text-sm md:text-lg">
+          Here there is a list of my educational journey and certifications, starting from my
+          Computer Science degree to some certifications.
         </p>
       </div>
       <Table class="mt-8">
-        <TableCaption class="text-muted-foreground mt-4">
-          A list of my educational journey and certifications.
-        </TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead class="w-[100px]">Year</TableHead>
@@ -65,7 +62,7 @@ const courses = await getCollection('courses');
                     <a
                       href={data.certificationUrl}
                       target="_blank"
-                      class="text-primary hover:text-primary/80 mr-auto flex items-center justify-center"
+                      class="text-muted-foreground hover:text-primary/80 mr-auto flex items-center justify-center"
                     >
                       <ExternalLink class="mr-2 h-4 w-4" /> Link
                     </a>

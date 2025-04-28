@@ -36,6 +36,7 @@ export class ProjectService {
       }
 
       const project = await response.json();
+      console.log(project);
 
       cacheProject(project);
       return project;

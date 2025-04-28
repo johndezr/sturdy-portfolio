@@ -1,17 +1,25 @@
 ---
-import { Image } from 'astro:assets';
-import ProfilePic from '@/assets/profile-pic.jpeg';
 import TShaped from '@/ui/islands/HomeTShaped.astro';
+import { Separator } from '@/components/ui/separator';
 ---
 
 <section id="about" class="dark:bg-background relative py-16 md:py-18">
-  <div class="container mx-auto max-w-5xl px-4">
-    <div class="flex flex-col items-center gap-12 lg:flex-row">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="mb-8 flex flex-col items-center justify-center">
+      <h2 class="mb-4 flex items-center justify-center text-5xl font-bold">
+        <img src="/icons/pre-title.svg" alt="Pre-title" class="mr-2 mb-6 h-8 w-8" /> About <span
+          class="text-primary ml-2"
+        >
+          me</span
+        >
+      </h2>
+      <p class="text-muted-foreground mx-auto max-w-2xl text-base md:text-lg">
+        Quick summary of who I am and what I do, and some of my skills.
+      </p>
+    </div>
+    <div class="flex flex-col items-center gap-12 py-8 lg:flex-row">
       <div class="flex-1">
-        <h2 class="mb-6 flex items-center text-3xl font-bold md:text-5xl">
-          <img src="/icons/pre-title.svg" alt="Pre-title" class="mr-2 h-8 w-8" />
-          A brief of <span class="text-primary ml-2">who I am</span>
-        </h2>
+        <h3 class="mb-6 flex justify-center text-3xl font-bold">A brief of who I am</h3>
         <div class="space-y-4">
           <p class="text-base-foreground">
             Senior Frontend Engineer with +8 years of experience designing and building interactive
@@ -23,28 +31,43 @@ import TShaped from '@/ui/islands/HomeTShaped.astro';
             build useful things.
           </p>
           <p class="text-base-foreground">
-            Outside of the keyboard, my curiosity is still active: I explore surfing, country music,
-            and how creative disciplines influence the way we solve problems.
+            Outside of the keyboard, I explore surfing, jazz music, and most of the time hiking.
           </p>
         </div>
       </div>
-      <div class="flex flex-1 justify-center">
-        <Image
-          src={ProfilePic}
-          alt="John Galindez"
-          class="border-secondary h-[400px] max-h-[500px] w-full rounded border-2 shadow-lg grayscale-10 filter transition-all duration-600 md:h-full md:max-w-[400px]"
-        />
+      <div class="flex flex-1 flex-col justify-center gap-2">
+        <h3 class="mb-4 text-center text-3xl font-bold">Skills</h3>
+        <p class="text-base-foreground text-sm">
+          <span class="text-base font-bold">AI/ML:</span> OpenAI API, Pinecone Vector DDBB, Replica,
+          AI SDK, TensorFlow & ML5.
+        </p>
+        <p class="text-base-foreground text-sm">
+          <span class="text-base font-bold">Infra/Testing:</span> Nginx, Digital Ocean, Jenkins, Github
+          CI/CD, Vitest, Testing Library, Cypress.
+        </p>
+        <p class="text-base-foreground text-sm">
+          <span class="text-base font-bold">Languages:</span> Javascript, Typescript, Python.
+        </p>
+        <p class="text-base-foreground text-sm">
+          <span class="text-base font-bold">Frameworks/Libraries:</span> Vue.js, React, Astro, Next,
+          Nuxt, Tanstack Query.
+        </p>
+        <p class="text-base-foreground text-sm">
+          <span class="text-base font-bold">Architecture:</span> MVC/MVVM, Clean/Hexagonal Arquitecture,
+          Microfrontends.
+        </p>
+        <p class="text-base-foreground text-sm">
+          <span class="text-base font-bold">Principles:</span> TDD, SOLID, DDD.
+        </p>
       </div>
     </div>
-  </div>
-  <div class="container mx-auto max-w-5xl px-4">
     <div class="flex flex-col-reverse items-center gap-6 md:flex-col lg:flex-row">
       <div class="w-[350px] basis-full md:basis-xl">
         <TShaped transition:persist />
       </div>
 
       <div class="mt-8 flex flex-1 flex-col gap-6 md:mt-0">
-        <h3 class="text-4xl font-bold">
+        <h3 class="text-3xl font-bold">
           <span class="border-primary border-b-2">T-Shaped</span> Generalist Developer
         </h3>
         <p class="text-base-foreground">

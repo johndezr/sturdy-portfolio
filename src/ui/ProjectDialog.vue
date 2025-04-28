@@ -45,7 +45,7 @@ const handleClose = () => {
               ></iframe>
             </div>
           </div>
-          <img v-else src="/images/projects/basek-drive.png" alt="Basek Drive" />
+          <img v-else :src="project.image" :alt="project.title" />
         </div>
         <div class="col-span-1 gap-2 px-2">
           <div class="mb-4">
@@ -73,6 +73,10 @@ const handleClose = () => {
         </div>
       </div>
       <div class="my-4 flex flex-col gap-2" v-html="project.content" />
+      <p>
+        Have a look to the whole design and code process
+        <a class="font-bold underline" :href="project.github" target="_blank"> Here. </a>
+      </p>
     </DialogContent>
   </Dialog>
 </template>
