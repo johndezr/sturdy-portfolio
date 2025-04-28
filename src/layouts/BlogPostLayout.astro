@@ -1,0 +1,70 @@
+---
+import '@/styles/global.css';
+import '@/styles/fonts.css';
+
+import Footer from '@/layouts/Footer.astro';
+import HeadSEO from '@/layouts/HeadSEO.astro';
+import Navbar from '@/ui/Navbar.vue';
+import { Calendar } from 'lucide-vue-next';
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <HeadSEO title={frontmatter.title} description={frontmatter.description} />
+  <body class="flex min-h-screen flex-col">
+    <header>
+      <Navbar client:load />
+    </header>
+    <main class="flex-grow">
+      <!-- <div class="absolute inset-0 -z-10 dark:hidden">
+        <div class="h-full w-full bg-[url('/images/hero-pattern.svg')]"></div>
+      </div> -->
+      <section class="relative flex flex-col items-center justify-center pt-24 md:pt-36 md:pb-12">
+        <div class="container mx-auto max-w-6xl px-4">
+          <div class="flex items-center justify-around">
+            <div class="flex flex-col items-center gap-2">
+              <Calendar class="h-5 w-5" />
+              <p class="text-muted-foreground text-sm">{frontmatter.pubDate}</p>
+              <h1 class="py-4 text-5xl font-bold">{frontmatter.title}</h1>
+              <div class="flex flex-wrap gap-2">
+                {frontmatter.tags.map((tag) => <Badge key={tag}>{tag}</Badge>)}
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <img
+                class="h-xl w-xl rounded-sm"
+                src={frontmatter.image.url}
+                alt={frontmatter.image.alt}
+              />
+            </div>
+          </div>
+          <Separator class="my-8" />
+          <slot />
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<!-- Hack: its only global because of the way the markdown is rendered -->
+<style is:global>
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+</style>

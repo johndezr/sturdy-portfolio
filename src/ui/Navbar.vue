@@ -47,7 +47,7 @@ onUnmounted(() => {
             href="/"
             class="font-caladea text-2xl font-bold tracking-tight transition-opacity hover:opacity-80"
           >
-            johndez.net
+            John Galindez
           </a>
 
           <div class="hidden h-6 md:block">
@@ -89,7 +89,6 @@ onUnmounted(() => {
           <div class="h-6">
             <Separator class="w-2" orientation="vertical" />
           </div>
-
           <Button class="ml-4 rounded-full px-5 py-5">
             <a href="/contact" class="flex items-center text-sm font-semibold"
               >Book a call <span class="ml-2"><Calendar class="size-4" /></span

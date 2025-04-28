@@ -44,6 +44,21 @@ const courses = defineCollection({
   }),
 });
 
+const posts = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/content/posts' }),
+  schema: z.object({
+    title: z.string(),
+    pubDate: z.string(),
+    description: z.string(),
+    author: z.string(),
+    image: z.object({
+      url: z.string(),
+      alt: z.string(),
+    }),
+    tags: z.array(z.string()),
+  }),
+});
+
 export const collections = {
   projects: projects,
   jobs: jobs,

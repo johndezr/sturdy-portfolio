@@ -1,0 +1,45 @@
+---
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+type Post = {
+  frontmatter: {
+    title: string;
+    pubDate: string;
+    description: string;
+    author: string;
+    image: string;
+    slug: string;
+    tags: string[];
+  };
+};
+
+const { post } = Astro.props as { post: Post };
+const { title, description, image, slug, tags } = post.frontmatter;
+---
+
+<div
+  class="max-w-sm rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800"
+>
+  <img class="rounded-t-lg" src="/images/projects/basek-drive.png" alt="" />
+  <div class="p-5">
+    <h5 class="mb-2 text-2xl font-bold tracking-tight dark:text-white">
+      {title}
+    </h5>
+    <p class="mb-3">
+      {description}
+    </p>
+    <div class="mb-4 flex flex-wrap gap-2">
+      {
+        tags.map((tag, index) => (
+          <Badge variant="outline" key={index}>
+            {tag}
+          </Badge>
+        ))
+      }
+    </div>
+    <Button variant="outline">
+      <a href={`/posts/${slug}`}>Read more</a>
+    </Button>
+  </div>
+</div>
