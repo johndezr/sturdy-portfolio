@@ -9,7 +9,10 @@ const projects = await getCollection('projects');
 const featuredProjects = projects.filter((project) => project.data.featured);
 ---
 
-<MainLayout title="Experience" description="Experience">
+<MainLayout
+  title="Projects | John Galindez"
+  description="Discover my featured web development and software engineering projects."
+>
   <section class="relative flex flex-col items-center justify-center pt-24 md:pt-36 md:pb-12">
     <div class="container mx-auto max-w-6xl px-4">
       <div>
@@ -22,7 +25,6 @@ const featuredProjects = projects.filter((project) => project.data.featured);
           Personal projects I've worked on where I experiment with new technologies and ideas.
         </p>
       </div>
-      <h2 class="my-6 text-2xl font-bold">Featured:</h2>
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {featuredProjects.map((project) => <ProjectCard project={project} />)}
       </div>

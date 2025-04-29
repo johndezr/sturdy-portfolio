@@ -9,7 +9,10 @@ const allProjects = await getCollection('projects');
 const featuredProjects = allProjects.filter((project) => project.data.featured);
 ---
 
-<MainLayout title="John Galindez - Portfolio">
+<MainLayout
+  title="Home | John Galindez"
+  description="T-Shaped Frontend Developer with 8 years of experience in design, architecture, web and mobile application development. Specialising in JavaScript, React, Vue, TDD and clean/hexagonal architectures."
+>
   <Hero />
   <About />
   <FeaturedProjects projects={featuredProjects} />

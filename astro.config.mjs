@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 import vercel from '@astrojs/vercel';
 import vue from '@astrojs/vue';
 
-const SITE_URL = 'https://test.com';
+const SITE_URL = 'https://johndez.net';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
@@ -31,13 +31,6 @@ export default defineConfig({
   integrations: [
     vue(),
     sitemap({
-      i18n: {
-        defaultLocale: 'es',
-        locales: {
-          es: 'es',
-          en: 'en',
-        },
-      },
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),

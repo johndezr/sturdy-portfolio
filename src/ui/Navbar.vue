@@ -19,6 +19,7 @@ const navLinks = ref([
   { text: 'Projects', url: '/projects' },
   { text: 'School', url: '/school' },
   { text: 'Blog', url: '/blog' },
+  { text: 'Now', url: '/now' },
 ]);
 
 onMounted(() => {

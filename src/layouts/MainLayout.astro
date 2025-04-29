@@ -11,14 +11,34 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  siteName?: string;
+  author?: string;
+  keywords?: string;
+  googleSiteVerification?: string;
 }
 
-const { title, description, image } = Astro.props;
+const {
+  title,
+  description = 'John Galindez | Portfolio, software engineer specializing in web development, JavaScript, TypeScript, and modern frameworks.',
+  image = '/og-image.png',
+  siteName = 'Portfolio | John Galindez',
+  author = 'John Galindez',
+  keywords = 'John Galindez, Software Engineer, Frontend Developer, JavaScript, TypeScript, Astro',
+  googleSiteVerification = '',
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <HeadSEO title={title} description={description} />
+  <HeadSEO
+    title={title}
+    description={description}
+    ogImage={typeof image === 'string' ? new URL(image, Astro.site) : image}
+    siteName={siteName}
+    author={author}
+    keywords={keywords}
+    googleSiteVerification={googleSiteVerification}
+  />
   <body class="flex min-h-screen flex-col">
     <header>
       <Navbar client:load />

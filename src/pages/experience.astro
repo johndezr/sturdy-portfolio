@@ -9,7 +9,10 @@ const jobs = await getCollection('jobs');
 const sortedJobs = jobs.sort((a, b) => b.data.order - a.data.order);
 ---
 
-<MainLayout title="Experience" description="Experience">
+<MainLayout
+  title="Experience | John Galindez"
+  description="Senior Frontend Developer with 8 years of experience in design, architecture, web and mobile application development. Specialising in JavaScript, React, Vue, TDD and clean/hexagonal architectures."
+>
   <section class="relative flex flex-col items-center justify-center pt-24 md:pt-36 md:pb-12">
     <div class="container mx-auto max-w-6xl px-4">
       <div>
@@ -18,9 +21,12 @@ const sortedJobs = jobs.sort((a, b) => b.data.order - a.data.order);
           The <span class="text-primary ml-2">Experience</span>
         </h1>
         <Separator class="my-4 max-w-sm" />
-        <p class="text-muted-foreground max-w-4xl text-sm md:text-lg">
-          I've been working as a Software Developer for +8 years from different companies and in
-          different roles, I'm open to new challenges and opportunities.
+        <p class="text-muted-foreground max-w-5xl text-sm md:text-base">
+          Senior Frontend Developer with 8 years of experience in design, architecture, web and
+          mobile application development. Specialising in JavaScript, React, Vue, TDD and
+          clean/hexagonal architectures. I have led projects with high traffic (+1M users/month) and
+          revenue (+100k sales) from startups to large companies. Currently integrating AI/ML in
+          front-end products to optimize and automate processes.
         </p>
       </div>
       <ExperienceTimeline jobs={sortedJobs} />

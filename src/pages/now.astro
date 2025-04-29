@@ -1,0 +1,37 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { Separator } from '@/components/ui/separator';
+---
+
+<MainLayout
+  title="Now | John Galindez"
+  description="See what I'm currently working on, learning, and focusing on. Stay updated with my latest projects, skills, and interests."
+>
+  <section class="relative flex flex-col items-center justify-center pt-24 md:pt-36 md:pb-12">
+    <div class="container mx-auto max-w-6xl px-4">
+      <div class="mb-8">
+        <h1 class="flex text-4xl font-bold md:text-5xl lg:text-6xl">
+          <img src="/icons/pre-title.svg" alt="Pre-title" class="mr-2 h-8 w-8" />
+          <span class="text-primary ml-2">Now</span>
+        </h1>
+        <Separator class="my-4 max-w-sm" />
+        <p class="text-muted-foreground max-w-2xl text-sm md:text-base">
+          This page includes a bit of what I’m working on and thinking about right now. Credit goes
+          to Derek Sivers for the /now page.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold">Working on</h2>
+        <p class="text-muted-foreground">I'm currently working on a new project.</p>
+        <h2 class="text-2xl font-bold">Thinking about</h2>
+        <p class="text-muted-foreground">I'm currently thinking about a new project.</p>
+        <h2 class="text-2xl font-bold">Listening to</h2>
+        <p class="text-muted-foreground">I'm currently listening to a new project.</p>
+        <h2 class="text-2xl font-bold">Reading</h2>
+        <p class="text-muted-foreground">I'm currently reading a new project.</p>
+        <h2 class="text-2xl font-bold">Learning</h2>
+        <p class="text-muted-foreground">I'm currently learning a new project.</p>
+      </div>
+    </div>
+  </section>
+</MainLayout>
