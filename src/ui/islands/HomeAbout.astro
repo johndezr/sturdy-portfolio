@@ -1,6 +1,6 @@
 ---
-import TShaped from '@/ui/islands/HomeTShaped.astro';
-import { Separator } from '@/components/ui/separator';
+// import TShaped from '@/ui/islands/HomeTShaped.astro';
+import TShapedVue from '@/ui/islands/HomeTShaped.vue';
 ---
 
 <section id="about" class="dark:bg-background relative py-16 md:py-18">
@@ -63,7 +63,8 @@ import { Separator } from '@/components/ui/separator';
     </div>
     <div class="flex flex-col-reverse items-center gap-6 md:flex-col lg:flex-row">
       <div class="w-[350px] basis-full md:basis-xl">
-        <TShaped client:visible transition:persist />
+        <!-- <TShaped transition:persist /> -->
+        <TShapedVue client:idle transition:persist />
       </div>
 
       <div class="mt-8 flex flex-1 flex-col gap-6 md:mt-0">
