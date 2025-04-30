@@ -42,9 +42,9 @@ const { frontmatter } = Astro.props;
                 {frontmatter.tags.map((tag) => <Badge key={tag}>{tag}</Badge>)}
               </div>
             </div>
-            <div class="flex items-center gap-2">
+            <!-- <div class="flex items-center gap-2">
               <img class="h-6xl w-6xl rounded-sm" src={frontmatter.image} alt={frontmatter.title} />
-            </div>
+            </div> -->
           </div>
           <Separator class="my-8" />
           <div class="prose dark:prose-invert">

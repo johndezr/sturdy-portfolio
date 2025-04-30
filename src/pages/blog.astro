@@ -4,6 +4,13 @@ import { Separator } from '@/components/ui/separator';
 
 import PostCard from '@/ui/modules/PostCard.astro';
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const sortedPosts = allPosts
+  .sort((a, b) => {
+    const dateA = new Date(a.frontmatter.pubDate);
+    const dateB = new Date(b.frontmatter.pubDate);
+    return dateB.getTime() - dateA.getTime();
+  })
+  .filter((post) => post.frontmatter.status === 'done');
 ---
 
 <MainLayout
@@ -24,7 +31,7 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
         </p>
       </div>
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {allPosts.map((post) => <PostCard post={post} />)}
+        {sortedPosts.map((post) => <PostCard post={post} />)}
       </div>
     </div>
   </section>

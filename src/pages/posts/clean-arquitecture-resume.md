@@ -7,6 +7,7 @@ tags: ['Clean Architecture', 'Software Architecture', 'Resume']
 image: '/images/projects/basek-drive.png'
 pubDate: '2025-01-13'
 slug: clean-arquitecture-resume
+status: done
 ---
 
 ## 🛠️ Mis 5 Quotes Imprescindibles de _Clean Architecture_
@@ -69,18 +70,6 @@ Una capa de aplicación que no conoce la base de datos. Un dominio que no sabe s
 
 **Consejo:**  
 Diseña para que cambiar detalles no implique romper el núcleo del sistema. Eso es lo que mantiene viva a una aplicación.
-
----
-
-## 📌 Resumen Visual
-
-Un diagrama rápido estilo Excalidraw-like:
-
-[ GUI ] | [ Controllers ] | [ Use Cases ] | [ Entities ]
-
-- **GUI**: Detalle
-- **Use Cases**: Núcleo
-- **Entities**: Política de negocio pura
 
 ---
 

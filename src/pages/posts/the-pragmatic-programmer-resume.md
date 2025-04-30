@@ -1,12 +1,13 @@
 ---
 layout: '../../layouts/BlogPostLayout.astro'
 title: '5 Lecciones Inolvidables de The Pragmatic Programmer'
-description: "Un repaso a algunas de las ideas más potentes y accionables del clásico libro 'The Pragmatic Programmer', con reflexiones y aplicaciones para programadores modernos."
+description: "Un repaso a algunas de las ideas más potentes y accionables del clásico libro 'The Pragmatic Programmer'."
 excerpt: 'Reflexiona sobre las citas más valiosas de The Pragmatic Programmer y cómo aplicarlas en tu día a día como developer pragmático.'
 tags: ['Pragmatic', 'Filosofía Programación', 'Software Craftsmanship']
 image: '/images/projects/basek-drive.png'
 pubDate: '2025-02-19'
 slug: the-pragmatic-programmer-resume
+status: done
 ---
 
 ## 📖 5 Lecciones Inolvidables de _The Pragmatic Programmer_

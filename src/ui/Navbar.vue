@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
 import { Menu, Calendar, Phone } from 'lucide-vue-next';
-
+import { NAV_LINKS } from '@/config/constants';
 const scrolled = ref(false);
 const isOpen = ref(false);
 const isActive = ref(false);
@@ -13,14 +13,7 @@ const handleScroll = () => {
   scrolled.value = window.scrollY > 10;
 };
 
-const navLinks = ref([
-  { text: 'Home', url: '/' },
-  { text: 'Experience', url: '/experience' },
-  { text: 'Projects', url: '/projects' },
-  { text: 'School', url: '/school' },
-  { text: 'Blog', url: '/blog' },
-  { text: 'Now', url: '/now' },
-]);
+const navLinks = ref(NAV_LINKS);
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
