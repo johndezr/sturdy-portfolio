@@ -1,8 +1,6 @@
 <section class="h-full w-full" id="tShapedChart"></section>
 
 <script>
-  import Chart from 'chart.js/auto';
-
   const chartData = {
     type: 'radar',
     data: {
@@ -58,7 +56,8 @@
     },
   };
 
-  document.addEventListener('astro:page-load', () => {
+  document.addEventListener('astro:page-load', async () => {
+    const { default: Chart } = await import('chart.js/auto');
     const ctx = document.createElement('canvas');
     document.querySelector('#tShapedChart')?.appendChild(ctx);
     window.__chart = new Chart(ctx, chartData);

@@ -21,11 +21,11 @@ const featuredProjects = projects.filter((project) => project.data.featured);
           The <span class="text-primary ml-2">Projects</span>
         </h1>
         <Separator class="my-4 max-w-sm" />
-        <p class="text-muted-foreground max-w-2xl text-sm md:text-lg">
+        <p class="text-muted-foreground max-w-2xl text-sm md:text-base">
           Personal projects I've worked on where I experiment with new technologies and ideas.
         </p>
       </div>
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {featuredProjects.map((project) => <ProjectCard project={project} />)}
       </div>
       <div class="mt-12 flex flex-col items-center justify-center">

@@ -10,14 +10,6 @@
   {
     "id": "2",
     "year": "2025",
-    "status": "In Progress",
-    "title": "FastAPI - Advanced",
-    "technologies": ["Python", "MVC", "REST"],
-    "school": "Udemy"
-  },
-  {
-    "id": "3",
-    "year": "2025",
     "status": "Completed",
     "title": "Strategic Thinking",
     "technologies": ["Business", "Strategy", "Leadership"],
@@ -25,7 +17,7 @@
     "certificationUrl": "https://github.com/johndezr/certs/blob/main/diploma-pensamiento-estrategico.pdf"
   },
   {
-    "id": "4",
+    "id": "3",
     "year": "2025",
     "status": "Completed",
     "title": "Soft Skills for Professional Development",
@@ -34,7 +26,7 @@
     "certificationUrl": "https://github.com/johndezr/certs/blob/main/diploma-habilidades-blandas.pdf"
   },
   {
-    "id": "5",
+    "id": "4",
     "year": "2025",
     "status": "Completed",
     "title": "Business Strategy Design with IA",
@@ -43,7 +35,7 @@
     "certificationUrl": "https://github.com/johndezr/certs/blob/main/diploma-estrategias-negocios-ia.pdf"
   },
   {
-    "id": "6",
+    "id": "5",
     "year": "2025",
     "status": "Completed",
     "title": "Prompt Engineering for Web Developers",
@@ -52,7 +44,7 @@
     "certificationUrl": "https://github.com/johndezr/certs/blob/main/prompt-engineering-for-web-developers.pdf"
   },
   {
-    "id": "7",
+    "id": "6",
     "year": "2025",
     "status": "Completed",
     "title": "Advanced JavaScript",
@@ -61,7 +53,7 @@
     "certificationUrl": "https://github.com/johndezr/certs/blob/main/advanced-javascript.pdf"
   },
   {
-    "id": "8",
+    "id": "7",
     "year": "2025",
     "status": "Completed",
     "title": "Build Reusable React Components",
@@ -70,7 +62,7 @@
     "certificationUrl": "https://github.com/johndezr/certs/blob/main/build-reusable-react-components.pdf"
   },
   {
-    "id": "9",
+    "id": "8",
     "year": "2025",
     "status": "Completed",
     "title": "Arquitectura Software Moderna: DDD, Eventos, Microservicios",
@@ -79,7 +71,7 @@
     "certificationUrl": "https://github.com/johndezr/certs/blob/main/arquitectura-moderna.pdf/"
   },
   {
-    "id": "11",
+    "id": "9",
     "year": "2020",
     "status": "Completed",
     "title": "Advanced CSS and Sass: Flexbox, Grid",
