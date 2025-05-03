@@ -21,7 +21,7 @@ const projects = defineCollection({
 });
 
 const jobs = defineCollection({
-  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/content/jobs' }),
+  loader: file('src/content/jobs.json'),
   schema: z.object({
     company: z.string(),
     role: z.string(),
@@ -29,6 +29,7 @@ const jobs = defineCollection({
     date: z.string(),
     technologies: z.array(z.string()),
     order: z.number().default(0),
+    features: z.array(z.string()),
   }),
 });
 
@@ -41,21 +42,6 @@ const courses = defineCollection({
     technologies: z.array(z.string()),
     school: z.string(),
     certificationUrl: z.string().optional(),
-  }),
-});
-
-const posts = defineCollection({
-  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/content/posts' }),
-  schema: z.object({
-    title: z.string(),
-    pubDate: z.string(),
-    description: z.string(),
-    author: z.string(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }),
-    tags: z.array(z.string()),
   }),
 });
 

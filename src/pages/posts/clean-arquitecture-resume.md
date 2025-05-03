@@ -1,13 +1,13 @@
 ---
 layout: '../../layouts/BlogPostLayout.astro'
-title: '5 Quotes Imprescindibles de Clean Architecture de Robert C. Martin'
-description: 'Descubre las citas más reveladoras de Clean Architecture de Robert C. Martin y cómo pueden transformar tu forma de diseñar software.'
+title: '5 Quotes Imprescindibles - The Clean Architecture'
+description: 'Resumen de Clean Architecture de Robert C. Martin y cómo pueden transformar tu forma de diseñar software.'
 excerpt: 'Clean Architecture no es solo un libro, es un manifiesto para crear software flexible y mantenible. Aquí te comparto 5 citas que todo desarrollador debería tatuarse.'
 tags: ['Clean Architecture', 'Software Architecture', 'Resume']
-image: '/images/projects/basek-drive.png'
-pubDate: '2025-01-13'
+pubDate: '13 January 2025'
 slug: clean-arquitecture-resume
 status: done
+image: https://res.cloudinary.com/dgkjzoae8/image/upload/v1746299454/istockphoto-1271584187-612x612_jlqzlu.jpg
 ---
 
 ## 🛠️ Mis 5 Quotes Imprescindibles de _Clean Architecture_

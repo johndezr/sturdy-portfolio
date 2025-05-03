@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { File } from 'lucide-vue-next';
 import { Separator } from '@/components/ui/separator';
+import { Calendar } from 'lucide-vue-next';
 ---
 
 <section
@@ -21,7 +22,7 @@ import { Separator } from '@/components/ui/separator';
 
       <div class="gap-4 md:gap-6">
         <h1 class="text-4xl font-bold md:text-5xl lg:text-6xl">
-          Your partner for crafted software development. 🚀
+          Your partner for Crafted Frontend Development. 🚀
         </h1>
       </div>
 
@@ -72,12 +73,15 @@ import { Separator } from '@/components/ui/separator';
       </div>
 
       <div class="mx-auto mt-2">
-        <Button class="rounded-full p-6 text-base font-semibold">
-          <a href="/resume.pdf" target="_blank" class="flex items-center gap-2">
-            Download CV
-            <File class="size-4" />
-          </a>
-        </Button>
+        <a
+          href="/John Galindez - Senior Frontend Engineer.pdf"
+          target="_blank"
+          class="flex items-center text-sm"
+        >
+          <Button class="rounded-full px-5 py-6 font-semibold">
+            Download Resume <span><File class="size-4" /></span></Button
+          >
+        </a>
       </div>
     </div>
   </div>

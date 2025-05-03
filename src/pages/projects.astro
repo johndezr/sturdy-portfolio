@@ -28,7 +28,7 @@ const featuredProjects = projects.filter((project) => project.data.featured);
       <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {featuredProjects.map((project) => <ProjectCard project={project} />)}
       </div>
-      <div class="mt-12 flex flex-col items-center justify-center">
+      <div class="my-8 flex flex-col items-center justify-center">
         <h3 class="text-bold text-sm md:text-xl">
           More projects are cooking up in my <a
             class="text-bold inline-block hover:underline"

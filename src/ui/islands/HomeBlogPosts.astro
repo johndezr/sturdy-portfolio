@@ -1,0 +1,34 @@
+---
+import { Button } from '@/components/ui/button';
+import PostCard from '@/ui/modules/PostCard.astro';
+import type { Post } from '@/types/post';
+interface Props {
+  posts: Post[];
+}
+
+const { posts } = Astro.props as Props;
+---
+
+<section id="projects" class="relative pb-16">
+  <div class="from-primary/5 to-primary/10 absolute inset-0 -z-10 bg-gradient-to-b"></div>
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="mb-12 text-center">
+      <h2 class="mb-4 text-5xl font-bold">
+        <span class="text-primary mr-2">Things</span> I've documented
+      </h2>
+      <p class="text-muted-foreground mx-auto max-w-2xl text-base md:text-lg">
+        A collection of my thoughts, ideas, and experiences in the form of blog posts and articles
+        in the last years of my career.
+      </p>
+    </div>
+
+    <div class="md:grid md:grid-cols-1 md:gap-6" id="projects-grid">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+    <div class="mt-2 flex justify-center">
+      <a href="/blog">
+        <Button variant="secondary" class="rounded-full font-bold">View all posts</Button>
+      </a>
+    </div>
+  </div>
+</section>

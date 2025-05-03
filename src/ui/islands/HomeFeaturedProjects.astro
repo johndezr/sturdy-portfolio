@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import ProjectCard from '@/ui/modules/ProjectCard.astro';
 import ProjectDialog from '@/ui/ProjectDialog.vue';
 import type { Project } from '@/types/project';
-
+import { Separator } from '@/components/ui/separator';
 interface Props {
   projects: Project[];
 }
@@ -12,21 +12,23 @@ interface Props {
 const { projects } = Astro.props as Props;
 ---
 
-<section id="projects" class="relative py-16">
-  <div class="from-primary/0 to-primary/20 absolute inset-0 -z-10 bg-gradient-to-b"></div>
+<section id="projects" class="relative pb-18">
+  <div class="from-primary/0 to-primary/5 absolute inset-0 -z-10 bg-gradient-to-b"></div>
   <div class="container mx-auto max-w-6xl px-4">
     <div class="mb-12 text-center">
-      <h2 class="mb-4 text-5xl font-bold">Things I've built</h2>
+      <h2 class="mb-4 text-5xl font-bold">Things I've <span class="text-primary">built</span></h2>
       <p class="text-muted-foreground mx-auto max-w-2xl text-base md:text-lg">
-        A selection of projects where the code is just the tip of the iceberg.
+        A selection of featured projects where the code is just the tip of the iceberg, I keep
+        learning new things and improving my skills.
       </p>
     </div>
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-3" id="projects-grid">
       {projects.map((project) => <ProjectCard project={project} />)}
     </div>
+    <Separator class="mx-auto my-8 max-w-lg" />
 
-    <div class="mt-12 flex justify-center">
+    <div class="mt-4 flex justify-center">
       <a href="/projects">
         <Button variant="secondary" class="rounded-full font-bold">View all projects</Button>
       </a>

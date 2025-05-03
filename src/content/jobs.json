@@ -1,0 +1,130 @@
+[
+  {
+    "slug": "independent-ai-consultant",
+    "company": "Independent AI Consultant",
+    "role": "Senior Frontend Engineer, Remote",
+    "date": "Nov 2024 - Present",
+    "order": 6,
+    "description": "AI-powered lead generation, customer support, and open-source AI-enhanced tools for knowledge management.",
+    "features": [
+      "Built an AI-powered lead generation and customer support system for a financial services firm managing +20 clients, automating content creation, lead profiling via dynamic forms, and deploying a self-learning chatbot trained on internal manager interactions reducing manual client interactions by 40% and increasing lead conversion efficiency.",
+      "Developing an open-source MCP server for Cornell-style AI-enhanced note-taking in Notion, integrating Pinecone and OpenAI, aimed at improving knowledge management and accessibility for a broad tech community."
+    ],
+    "technologies": [
+      "MCP Servers",
+      "n8n",
+      "React, Next, Astro",
+      "Pinecone",
+      "OpenAI API",
+      "Agents",
+      "LangChain",
+      "AI SDK"
+    ]
+  },
+  {
+    "slug": "io-builders",
+    "company": "IOBuilders",
+    "role": "Senior Frontend Engineer, Remote",
+    "date": "Jun 2023 - Oct 2024",
+    "order": 5,
+    "description": "Digital NFT marketplace, mobile Web3 wallet, and React/Next.js/React Native product features.",
+    "features": [
+      "Collaborated and delivered a digital NFT for collectibles marketplace, enabling +1k product sales.",
+      "Developed a mobile Web3 wallet integration module, supporting NFT purchases via cryptocurrency transactions using React."
+    ],
+    "technologies": [
+      "React Native",
+      "Next",
+      "Typescript",
+      "Tailwind",
+      "DDD",
+      "React Testing",
+      "Tanstack Query",
+      "Web3"
+    ]
+  },
+  {
+    "slug": "flexicar",
+    "company": "Flexicar",
+    "role": "Senior Frontend Engineer, Remote",
+    "date": "Dec 2021 - May 2023",
+    "order": 4,
+    "description": "Booking platform, car appraisal, and React + Clean Architecture refactor for high-traffic automotive portal.",
+    "features": [
+      "Led the development of the company's cars appraisal and booking platform, handling +100k monthly active users, improving user engagement metrics by 20% after redesign using React, Next.js, Nest.js, TailwindCSS, Jenkins, Vitest.",
+      "Refactored a legacy PHP CRM into a React + Clean Architecture application, improving code maintainability and reducing bug reports by 20%."
+    ],
+    "technologies": ["Next", "Jenkins", "Tailwind", "MVVM", "React Testing", "Nest", "Vitest"]
+  },
+  {
+    "slug": "greyhounders",
+    "company": "Greyhounders",
+    "role": "Senior Frontend Engineer, Madrid, Spain",
+    "date": "Feb 2020 - Nov 2021",
+    "order": 3,
+    "description": "E-commerce SSR, AR try-on tool, and payment infrastructure for optical industry startup.",
+    "features": [
+      "Built the infrastructure for +50k users to integrate and handle online payments with Paypal and Stripe API.",
+      "Built the SSR e-commerce from scratch achieving a revenue of +100k annual and supporting traffic peaks of more than 80k during special dates using Nuxt.js, Vue.js, Tailwind CSS, Digital Ocean, MongoDB, Nginx.",
+      "Documented and integrated an augmented reality try-on tool for optical products, improving online conversion rates by 5%."
+    ],
+    "technologies": [
+      "Nuxt.js",
+      "Vue.js",
+      "Tailwind CSS",
+      "Digital Ocean",
+      "MongoDB",
+      "Nginx",
+      "Paypal API",
+      "Stripe API",
+      "AR"
+    ]
+  },
+  {
+    "company": "Financial Services Carrefour",
+    "role": "Senior Frontend Engineer, Madrid, Spain",
+    "date": "Jan 2019 - Dec 2020",
+    "order": 2,
+    "description": "Component library, web components, and UI/UX improvements for financial services platform.",
+    "features": [
+      "Architected and delivered a component library of +20 reusable UI elements, integrated by +50k recurring users, enhancing product development speed by 35% with Typescript, Vue.js, TDD, SOLID, Web Components, Atomic Design, Figma, Storyblok.",
+      "Created and published +30 web components in NPM using Vue.js and Web Components with +5k downloads, having a big impact in the UX/UI of the company web and mobile applications."
+    ],
+    "technologies": [
+      "Vue.js",
+      "Typescript",
+      "Storyblok",
+      "Web Components",
+      "SOLID",
+      "Atomic Design",
+      "Figma"
+    ]
+  },
+  {
+    "slug": "next-best-target",
+    "company": "Next Best Target",
+    "role": "Frontend Engineer, Madrid, Spain",
+    "date": "Mar 2018 - Dec 2018",
+    "order": 1.5,
+    "description": "Predictive analytics dashboard and landing page for educational performance metrics.",
+    "features": [
+      "Created a predictive analytics dashboard for +10 universities, visualizing educational performance metrics through machine learning cutting data interpretation time by 10% using Vue.js, AWS, SOLID, Node.js, TDD.",
+      "Built the design and development of the company's landing page from scratch, handling +10k weekly visits using Vue.js."
+    ],
+    "technologies": ["Vue.js", "AWS", "SOLID", "Node.js", "TDD"]
+  },
+  {
+    "slug": "sipay-plus",
+    "company": "Sipay Plus",
+    "role": "Frontend Engineer, Madrid, Spain",
+    "date": "Nov 2016 - Feb 2018",
+    "order": 1,
+    "description": "Dynamic banking operations dashboard, markdown documentation generator, and merchant payment acceptance module.",
+    "features": [
+      "Built the dashboard for the visualisation for +10k of dynamic banking operations from design to production, using Vue.js, Sass, REST API, Python, Nginx, MVC/MVVM.",
+      "Built a markdown documentation generator tool for the marketing team, improving content publishing efficiency using Vanilla JS.",
+      "Created a merchant payment acceptance module enabling electronic payments (credit/debit card, paypal) with Vue.js, accelerating client onboarding by 12%."
+    ],
+    "technologies": ["Vue.js", "Sass", "REST API", "Python", "Nginx", "MVC/MVVM", "Vanilla JS"]
+  }
+]

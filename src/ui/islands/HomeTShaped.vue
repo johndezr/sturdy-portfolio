@@ -11,22 +11,24 @@ const chartData = {
   type: 'radar',
   data: {
     labels: [
-      'Frontend Architecture',
+      'Clean Architecture',
       'React/Vue',
-      'AI/ML',
+      'AI',
       'TypeScript',
       'Design Thinking',
-      'Next.js/Nuxt.js',
+      'Next/Nuxt',
       'Astro',
       'Python',
-      'DevOps',
-      'System Design',
-      'JavaScript',
+      'Docker',
+      'PostgreSQL/MongoDB',
+      'Digital Ocean/AWS',
+      'CI/CD',
+      'Testing',
     ],
     datasets: [
       {
         label: 'Depth & Breadth',
-        data: [90, 90, 60, 80, 70, 75, 60, 60, 40, 70, 90],
+        data: [90, 90, 70, 90, 70, 90, 90, 60, 60, 60, 70, 70, 90],
         backgroundColor: 'rgba(100, 116, 139, 0.2)',
         borderColor: 'rgba(100, 116, 139, 1)',
         borderWidth: 2,
@@ -37,6 +39,9 @@ const chartData = {
   options: {
     responsive: true,
     plugins: {
+      legend: {
+        display: false,
+      },
       title: {
         display: true,
         font: {

@@ -72,7 +72,7 @@ onUnmounted(() => {
             <img src="/icons/github.svg" alt="GitHub" />
           </a>
           <a
-            href="https://linkedin.com/in/johngalindez"
+            href="https://linkedin.com/in/johndezr"
             target="_blank"
             class="text-foreground hover:text-primary/80"
             aria-label="LinkedIn"
@@ -83,11 +83,15 @@ onUnmounted(() => {
           <div class="h-6">
             <Separator class="w-2" orientation="vertical" />
           </div>
-          <Button class="ml-4 rounded-full px-5 py-5">
-            <a href="/contact" class="flex items-center text-sm font-semibold"
-              >Book a call <span class="ml-2"><Calendar class="size-4" /></span
-            ></a>
-          </Button>
+          <a
+            href="https://calendly.com/johndez/30min"
+            target="_blank"
+            class="flex items-center text-sm"
+          >
+            <Button class="rounded-full px-5 py-5 font-semibold">
+              Book a call <span class="ml-2"><Calendar class="size-4" /></span
+            ></Button>
+          </a>
         </div>
 
         <!-- Mobile menu -->
@@ -99,12 +103,12 @@ onUnmounted(() => {
         <!-- Mobile Sheet -->
         <Sheet v-model:open="isOpen">
           <SheetContent side="right" :class="{ 'pointer-events-auto': isOpen }">
-            <div class="mt-8 flex flex-col space-y-6">
+            <div class="mt-8 flex flex-col space-y-6 p-4">
               <a
                 v-for="link in navLinks"
                 :key="link.text"
                 :href="link.url"
-                class="hover:text-primary/80 text-lg font-medium"
+                class="hover:text-primary/80"
                 @click="isOpen = false"
               >
                 {{ link.text }}
@@ -128,7 +132,7 @@ onUnmounted(() => {
                   <img src="/icons/linkedin.svg" alt="LinkedIn" />
                 </a>
               </div>
-              <Button class="ml-4 rounded-full px-5 py-5">
+              <Button class="ml-4 rounded-full p-5">
                 <a href="/contact" class="flex items-center text-sm font-semibold"
                   >Book a call <span class="ml-2"><Calendar class="size-4" /></span
                 ></a>

@@ -12,7 +12,7 @@ interface ExperienceTimelineProps {
 const { jobs } = Astro.props as ExperienceTimelineProps;
 ---
 
-<div class="mb-12 md:mt-2">
+<div class="my-4 md:ml-16">
   {
     jobs.map((job) => (
       <div class="group relative py-6 pl-8 sm:pl-32">
@@ -23,7 +23,12 @@ const { jobs } = Astro.props as ExperienceTimelineProps;
           </time>
           <h4 class="text-foreground-primary text-xl font-bold">{job.data.role}</h4>
         </div>
-        <p class="text-foreground-secondary text-sm">{job.data.description}</p>
+        <p class="text-muted-foreground text-sm">{job.data.description}</p>
+        <ul class="my-2 list-disc pl-2">
+          {job.data.features.map((feature: string) => (
+            <li class="text-foreground-secondary max-w-3xl text-sm">{feature}</li>
+          ))}
+        </ul>
         <div class="mt-4 flex flex-wrap gap-2">
           {job.data.technologies.map((technology: string) => (
             <Badge

@@ -2,11 +2,22 @@
 import MainLayout from '@/layouts/MainLayout.astro';
 import Hero from '@/ui/islands/HomeHero.astro';
 import About from '@/ui/islands/HomeAbout.astro';
+import FeaturedPosts from '@/ui/islands/HomeBlogPosts.astro';
 import FeaturedProjects from '@/ui/islands/HomeFeaturedProjects.astro';
 import { getCollection } from 'astro:content';
 
 const allProjects = await getCollection('projects');
 const featuredProjects = allProjects.filter((project) => project.data.featured);
+
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const sortedPosts = allPosts
+  .sort((a, b) => {
+    const dateA = new Date(a.frontmatter.pubDate);
+    const dateB = new Date(b.frontmatter.pubDate);
+    return dateB.getTime() - dateA.getTime();
+  })
+  .filter((post) => post.frontmatter.status === 'done')
+  .slice(0, 3);
 ---
 
 <MainLayout
@@ -16,4 +27,5 @@ const featuredProjects = allProjects.filter((project) => project.data.featured);
   <Hero />
   <About />
   <FeaturedProjects projects={featuredProjects} />
+  <FeaturedPosts posts={sortedPosts} />
 </MainLayout>

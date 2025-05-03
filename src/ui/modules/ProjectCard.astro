@@ -15,7 +15,7 @@ const { project } = Astro.props;
 ---
 
 <div
-  class="group bg-secondary relative flex-shrink-0 overflow-hidden rounded-lg shadow-lg"
+  class="group bg-secondary relative flex-shrink-0 cursor-pointer overflow-hidden rounded-lg shadow-lg"
   data-project-slug={project.data.slug}
 >
   <svg
@@ -35,13 +35,15 @@ const { project } = Astro.props;
     <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"
     ></rect>
   </svg>
-  <div
-    class="relative flex items-center justify-center px-4 pt-4 transition-transform group-hover:scale-110"
-  >
-    <Image class="relative w-50" src={project.data.logo} alt={project.data.title} />
-  </div>
-  <div class="px-8 py-4">
-    <h3 class="border-primary text-foreground mb-4 w-fit border-b-1 text-center text-xl font-bold">
+  <a class="block p-8" href={project.data.github} target="_blank">
+    <div
+      class="relative flex items-center justify-center transition-transform group-hover:scale-110"
+    >
+      <Image class="relative w-50" src={project.data.logo} alt={project.data.title} />
+    </div>
+    <h3
+      class="border-primary text-foreground my-4 w-fit border-b-1 text-xl font-bold hover:underline"
+    >
       {project.data.title}
     </h3>
     <p class="text-foreground mb-2 block pb-2 text-sm" set:html={project.data.description} />
@@ -54,26 +56,7 @@ const { project } = Astro.props;
         ))
       }
     </div>
-
-    <!-- <p class="z-10 cursor-pointer text-sm hover:underline">
-        <BookOpen class="inline-block size-4" /> Resume
-      </p> -->
-    <div class="relative z-10 my-4 cursor-pointer text-center">
-      {
-        project.data.github && (
-          <a
-            href={project.data.github}
-            target="_blank"
-            class="me-2 mb-2 rounded-lg bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 px-5 py-2.5 text-center text-sm text-white hover:bg-gradient-to-br focus:ring-4 focus:ring-cyan-300 focus:outline-none dark:focus:ring-cyan-800"
-            data-link
-          >
-            <img src="/icons/github.svg" alt="Github" class="mr-1 mb-1 inline-block size-5" />
-            Documentation
-          </a>
-        )
-      }
-    </div>
-  </div>
+  </a>
 </div>
 
 <script>
