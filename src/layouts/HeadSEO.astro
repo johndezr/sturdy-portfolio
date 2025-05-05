@@ -28,6 +28,8 @@ const {
   keywords,
   googleSiteVerification,
 } = Astro.props;
+
+const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID;
 ---
 
 <meta charset="utf-8" />
@@ -62,3 +64,18 @@ const {
 <meta property="twitter:image" content={ogImage} />
 {twitterSite && <meta name="twitter:site" content={twitterSite} />}
 {twitterCreator && <meta name="twitter:creator" content={twitterCreator} />}
+
+<!-- Google tag (gtag.js) -->
+<script
+  is:inline
+  type="text/partytown"
+  async
+  src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+<script is:inline type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', '{gaId}');
+</script>
