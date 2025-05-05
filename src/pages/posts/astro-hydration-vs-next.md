@@ -7,7 +7,7 @@ tags:
   ['Astro', 'Next.js', 'Hydration', 'Partial Hydration', 'Web Performance', 'Islands Architecture']
 pubDate: '28 April 2025'
 status: done
-slug: astro-hydratation-vs-next
+slug: astro-hydration-vs-next
 image: https://res.cloudinary.com/dgkjzoae8/image/upload/v1746299454/istockphoto-1271584187-612x612_jlqzlu.jpg
 ---
 
@@ -116,8 +116,6 @@ Pero:
 
 ## 📚 Referencias
 
-- 📄 [Astro Docs: Partial Hydration](https://docs.astro.build/en/core-concepts/component-islands/)
-- 📘 [Next.js Docs: React Server Components](https://nextjs.org/docs/getting-started/react-architecture)
 - 📖 [Islands Architecture explicado](https://www.patterns.dev/posts/islands-architecture/)
 
 ---
