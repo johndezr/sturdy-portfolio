@@ -19,14 +19,14 @@ const { title, description, image, slug, tags, pubDate } = post.frontmatter;
 ---
 
 <div
-  class="border-primary-100 mx-auto rounded-xs p-2 shadow-xs md:max-w-5xl dark:border-gray-700 dark:bg-gray-800"
+  class="border-primary-100 rounded-xs p-2 shadow-xs md:max-w-5xl dark:border-gray-700 dark:bg-gray-800"
 >
   <div class="flex flex-col md:flex-row">
-    <a class="contents" href={`/post/${slug}`}>
+    <!-- <a class="contents" href={`/post/${slug}`}>
       <Image inferSize src={image} alt={title} class="md:h-48 md:max-w-1/3" />
-    </a>
+    </a> -->
     <div class="ml-2 flex flex-col p-2">
-      <a href={`/blog/${slug}`}>
+      <a href={`/posts/${slug}`}>
         <h5 class="mb-2 text-xl font-bold tracking-tight dark:text-white">
           {title}
         </h5>
