@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "the-pragmatic-programmer",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt and David Thomas",
+    "caption": "Even though your title might be some variation of ‘Software Developer’ or ‘Software Engineer,’ in truth it should be 'Problem Solver.",
+    "cover": "https://m.media-amazon.com/images/I/71f1jieYHNL.jpg"
+  },
+  {
+    "slug": "the-art-of-readable-code",
+    "title": "Clean Architecture",
+    "author": "Robert C. Martin",
+    "caption": "Which kinds of decisions are premature? Decisions that have nothing to do with the business requirements—the use cases—of the system...",
+    "cover": "https://m.media-amazon.com/images/I/91U07g97HbL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "slug": "mediations-by-marco-eurelio",
+    "title": "Mediations",
+    "author": "Marco Eurelio",
+    "caption": "Did I benefit society in any way? Well, I have already received my award.",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDPu93tqzgi4CeSTAoZ9ka4TAy-tHjeCnbaA&s"
+  }
+]

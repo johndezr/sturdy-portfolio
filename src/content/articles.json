@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "a-gentle-introduction-to-islands",
+    "title": "A Gentle Introduction to Islands",
+    "link": "https://deno.com/blog/intro-to-islands"
+  },
+  {
+    "slug": "learn-redis-the-hard-way",
+    "title": "Learn Redis the hard way (in production)",
+    "link": "https://tech.trivago.com/post/learn-redis-the-hard-way"
+  },
+  {
+    "slug": "sync-engines-are-the-future",
+    "title": "Sync Engines are the Future",
+    "link": "https://www.instantdb.com/essays/sync_future"
+  },
+  {
+    "slug": "modularizing-react-applications-with-established-ui-patterns",
+    "title": "Modularizing React Applications with Established UI Patterns",
+    "link": "https://martinfowler.com/articles/modularizing-react-apps.html"
+  },
+  {
+    "slug": "why-engineers-should-invest-in-decision-making-skills-early",
+    "title": "Why Engineers Should Invest in Decision Making Skills Early",
+    "link": "https://www.reforge.com/blog/technical-decision-making"
+  }
+]
