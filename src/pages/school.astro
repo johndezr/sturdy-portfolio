@@ -1,6 +1,7 @@
 ---
 import MainLayout from '@/layouts/MainLayout.astro';
 import { Separator } from '@/components/ui/separator';
+import { Image } from 'astro:assets';
 import {
   Table,
   TableBody,
@@ -15,6 +16,8 @@ import { getCollection } from 'astro:content';
 import { Badge } from '@/components/ui/badge';
 
 const courses = await getCollection('courses');
+const articles = await getCollection('articles');
+const bookshelf = await getCollection('bookshelf');
 ---
 
 <MainLayout
@@ -30,52 +33,87 @@ const courses = await getCollection('courses');
         </h1>
         <Separator class="my-4 max-w-sm" />
         <p class="text-muted-foreground max-w-2xl text-sm md:text-base">
-          Here there is a list of my educational journey and certifications, starting from my
-          Computer Science degree to some certifications.
+          Here there is a list of my educational journey, starting from my Computer Science Degree
+          to independent courses and certifications.
         </p>
       </div>
-      <Table class="mt-8">
-        <TableHeader>
-          <TableRow>
-            <TableHead class="w-[100px]">Year</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Title</TableHead>
-            <TableHead>Technologies</TableHead>
-            <TableHead>School</TableHead>
-            <TableHead class="text-center">Certification</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {
-            courses.map(({ data }) => (
-              <TableRow class="hover:bg-muted/50 h-18">
-                <TableCell class="font-medium">{data.year}</TableCell>
-                <TableCell>{data.status}</TableCell>
-                <TableCell class="font-bold">{data.title}</TableCell>
-                <TableCell>
-                  {data.technologies.map((tec) => (
-                    <Badge class="mr-2 rounded-full font-bold" variant="secondary">
-                      {tec}
-                    </Badge>
-                  ))}
-                </TableCell>
-                <TableCell>{data.school}</TableCell>
-                <TableCell>
-                  {data.certificationUrl && (
-                    <a
-                      href={data.certificationUrl}
-                      target="_blank"
-                      class="text-muted-foreground hover:text-primary/80 mr-auto flex items-center justify-center"
-                    >
-                      <ExternalLink class="mr-2 h-4 w-4" /> Link
-                    </a>
-                  )}
-                </TableCell>
+      <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="col-span-2">
+          <h2 class="text-2xl font-bold">Certifications</h2>
+          <Table class="mt-4">
+            <TableHeader>
+              <TableRow>
+                <TableHead>Status</TableHead>
+                <TableHead>Course</TableHead>
+                <!-- <TableHead>Skills</TableHead>
+                <TableHead>School</TableHead> -->
               </TableRow>
-            ))
-          }
-        </TableBody>
-      </Table>
+            </TableHeader>
+            <TableBody>
+              {
+                courses.map(({ data }) => (
+                  <TableRow class="hover:bg-muted/50 h-18">
+                    <TableCell>{data.status}</TableCell>
+                    <TableCell class="flex flex-col gap-2">
+                      <a
+                        target="_blank"
+                        class="inline-block cursor-pointer font-bold hover:underline"
+                        href={`/courses/${data.certificationUrl}`}
+                      >
+                        <ExternalLink class="inline-block h-4 w-4" /> {data.title}
+                      </a>
+                      <div class="flex flex-wrap">
+                        {data.technologies.map((tec) => (
+                          <Badge class="mr-2 rounded-full" variant="outline">
+                            {tec}
+                          </Badge>
+                        ))}
+                      </div>
+                    </TableCell>
+                    {/* <TableCell>
+                      {data.technologies.map((tec) => (
+                        <Badge class="mr-2 rounded-full font-bold" variant="secondary">
+                          {tec}
+                        </Badge>
+                      ))}
+                    </TableCell>
+                    <TableCell>{data.school}</TableCell> */}
+                  </TableRow>
+                ))
+              }
+            </TableBody>
+          </Table>
+        </div>
+        <div class="col-span-1">
+          <h2 class="text-2xl font-bold">Latest Articles</h2>
+          <div class="mt-4 flex flex-col gap-4">
+            {
+              articles.map(({ data }) => (
+                <a href={data.link} target="_blank" class="inline-block text-sm hover:underline">
+                  <ExternalLink class="inline-block h-4 w-4" /> {data.title}
+                </a>
+              ))
+            }
+          </div>
+          <h2 class="mt-8 text-2xl font-bold">Book Shelf</h2>
+          <div class="mt-4 flex h-[340px] flex-col justify-start gap-6 overflow-auto">
+            {
+              bookshelf.map(({ data }) => (
+                <div class="flex items-center gap-4">
+                  <Image inferSize={true} src={data.cover} alt={data.title} class="h-34 w-26" />
+                  <div>
+                    <p class="font text-sm">{data.title}</p>
+                    <blockquote class="my-2 text-xs font-semibold italic dark:text-white">
+                      <p>{data.caption}</p>
+                    </blockquote>
+                    <p class="text-xs">{data.author}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </MainLayout>

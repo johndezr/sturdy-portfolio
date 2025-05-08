@@ -45,8 +45,28 @@ const courses = defineCollection({
   }),
 });
 
+const articles = defineCollection({
+  loader: file('src/content/articles.json'),
+  schema: z.object({
+    title: z.string(),
+    link: z.string(),
+  }),
+});
+
+const bookshelf = defineCollection({
+  loader: file('src/content/bookshelf.json'),
+  schema: z.object({
+    title: z.string(),
+    cover: z.string(),
+    author: z.string(),
+    caption: z.string(),
+  }),
+});
+
 export const collections = {
   projects: projects,
   jobs: jobs,
   courses: courses,
+  articles: articles,
+  bookshelf: bookshelf,
 };

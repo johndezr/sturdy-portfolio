@@ -1,7 +1,7 @@
 [
   {
-    "slug": "independent-ai-consultant",
-    "company": "Independent AI Consultant",
+    "slug": "shaped-devs",
+    "company": "ShapedDevs",
     "role": "Senior Frontend Engineer, Remote",
     "date": "Nov 2024 - Present",
     "order": 6,
@@ -81,6 +81,7 @@
     ]
   },
   {
+    "slug": "financial-services-carrefour",
     "company": "Financial Services Carrefour",
     "role": "Senior Frontend Engineer, Madrid, Spain",
     "date": "Jan 2019 - Dec 2020",
