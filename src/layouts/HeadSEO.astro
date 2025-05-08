@@ -29,7 +29,8 @@ const {
   googleSiteVerification,
 } = Astro.props;
 
-const gaId = import.meta.env.GOOGLE_ANALYTICS_ID;
+// Asegurarnos de que la variable de entorno esté definida
+const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID;
 ---
 
 <meta charset="utf-8" />
@@ -71,7 +72,7 @@ const gaId = import.meta.env.GOOGLE_ANALYTICS_ID;
   type="text/partytown"
   async
   src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-<script is:inline type="text/partytown">
+<script is:inline define:vars={{ gaId }}>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
