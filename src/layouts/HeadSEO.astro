@@ -71,7 +71,13 @@ const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID;
   type="text/partytown"
   async
   src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-<script is:inline>
+<script type="text/partytown" is:inline>
+  window.gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+  });
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
