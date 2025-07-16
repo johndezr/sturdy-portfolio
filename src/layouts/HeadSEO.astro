@@ -70,18 +70,12 @@ const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID;
   is:inline
   type="text/partytown"
   async
-  src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-<script type="text/partytown" is:inline>
-  window.gtag('consent', 'default', {
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    analytics_storage: 'denied',
-  });
+  src="https://www.googletagmanager.com/gtag/js?id=G-2S2SQ0L7X3"></script>
+<script is:inline type="text/partytown">
   window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', 'G-2S2SQ0L7X3');
+  window.gtag = function () {
+        dataLayer.push(arguments);
+    };
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-2S2SQ0L7X3');
 </script>
